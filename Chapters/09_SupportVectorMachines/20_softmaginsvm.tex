@@ -211,7 +211,7 @@ giống như với SVM lề cứng, chúng ta sẽ quan tâm hơn tới bài to�
  
 Trước kết, ta cần kiểm tra tiêu chuẩn Slater của bài toán tối ưu lồi
 \eqref{eqn:20_2}. Nếu tiêu chuẩn này thoả mãn, đối ngẫu mạnh sẽ
-thoả mãn, và ta có thể tìm nghiệm của bài toán tối ưu~\eqref{eqn:20_2} thông qua
+thoả mãn và ta có thể tìm nghiệm của bài toán tối ưu~\eqref{eqn:20_2} thông qua
 hệ điều kiện KKT (xem Chương~\ref{cha:duality}). 
  
  
@@ -487,7 +487,7 @@ các nhận xét sau đây:
     < 0$ sẽ gây ra mất mát lớn hơn. Vì vậy, khi tối thiểu hàm mất mát, ta sẽ
     hạn chế được những điểm bị phân loại lỗi và sang lớp kia quá nhiều. Đây chính là một ưu điểm của mất mát bản lề.
      
-    \item Mất mát bản lề là một hàm liên tục, và \textit{có đạo hàm tại gần
+    \item Mất mát bản lề là một hàm liên tục và \textit{có đạo hàm tại gần
     như mọi nơi} ({almost everywhere differentiable}) trừ điểm có hoành độ bằng 1. Ngoài ra, đạo hàm của hàm này theo $yz$ cũng rất dễ xác định: bằng -1 tại các điểm nhỏ hơn 1 và bằng 0 tại các điểm lớn hơn 1. Tại 1, ta có thể coi đạo hàm của nó bằng 0. 
 \end{itemize}
  
@@ -689,7 +689,7 @@ vector hóa như chúng ta sẽ thấy trong mục tiếp theo.
  
 \section{Lập trình với SVM lề mềm}
 Trong mục này, nghiệm của một bài toán SVM lề mềm được tìm bằng ba cách khác nhau: sử dụng thư viện sklearn, giải bài toán đối ngẫu
-bằng CVXOPT, và giải bài toán tối ưu không ràng buộc bằng gradient
+bằng CVXOPT và giải bài toán tối ưu không ràng buộc bằng gradient
 descent. Giá trị $C$ được sử dụng là 100.
 Nếu mọi tính toán từ đầu chương là chính xác, nghiệm của ba cách làm này sẽ
 gần giống nhau, sự khác nhau có thể đến từ sai số tính toán.

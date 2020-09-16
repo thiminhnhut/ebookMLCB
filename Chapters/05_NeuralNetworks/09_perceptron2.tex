@@ -79,7 +79,7 @@ Bài toán phân loại nhị phân trong không gian hai chiều. (a) Cho hai t
 
 % \textbf{Bài toán Perceptron }
 
-% Bài toán Perceptron được phát biểu như sau. \textit{Cho hai lớp dữ liệu linearly separable, hãy tìm một siêu phẳng sao cho toàn bộ các điểm thuộc một lớp nằm về một phía của siêu phẳng đó, và khác phía với mọi điểm thuộc lớp còn lại.}
+% Bài toán Perceptron được phát biểu như sau. \textit{Cho hai lớp dữ liệu linearly separable, hãy tìm một siêu phẳng sao cho toàn bộ các điểm thuộc một lớp nằm về một phía của siêu phẳng đó và khác phía với mọi điểm thuộc lớp còn lại.}
 
 
 
@@ -302,7 +302,7 @@ Dấu nhỏ hơn ở dòng cuối xảy ra vì $y_i^2 = 1$ và $2y_i\mathbf{x}_i
 và chọn $\alpha = \frac{\beta^2}{\gamma}$, ta sẽ có
 \begin{math}
 0 \leq u_{\alpha}(t+1) < u_{\alpha}(t) + \beta^2 - 2\alpha\gamma = u_{\alpha}(t) - \beta^2.
-\end{math} Ta có thể chọn giá trị này vì~\eqref{eqn:9_con} đúng với $\alpha$ bất kỳ. Điều này chỉ ra rằng nếu luôn có điểm bị phân loại lỗi thì dãy $u_{\alpha}(t)$ là một dãy giảm bị chặn dưới bởi 0, và phần tử sau kém phần tử trước ít nhất một lượng là $\beta^2\geq 1$. Điều vô lý này chứng tỏ giả thiết phản chứng là sai. Nói cách khác, thuật toán perceptron hội tụ sau một số hữu hạn bước.
+\end{math} Ta có thể chọn giá trị này vì~\eqref{eqn:9_con} đúng với $\alpha$ bất kỳ. Điều này chỉ ra rằng nếu luôn có điểm bị phân loại lỗi thì dãy $u_{\alpha}(t)$ là một dãy giảm bị chặn dưới bởi 0 và phần tử sau kém phần tử trước ít nhất một lượng là $\beta^2\geq 1$. Điều vô lý này chứng tỏ giả thiết phản chứng là sai. Nói cách khác, thuật toán perceptron hội tụ sau một số hữu hạn bước.
 
 
 % $\mathbf{w}_{t+1}$ tiến về phía làm cho $\mathbf{x}_i$ được phân loại đúng. Điều tương tự xảy ra nếu $y_i = -1$.

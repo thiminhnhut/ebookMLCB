@@ -411,7 +411,7 @@ niệm mới: \textit{tiên nghiệm liên hợp} (conjugate prior).
 \index{tiên nghiệm liên hợp -- conjugate prior}
 \index{phân phối liên hợp -- conjugate distribution}
 Nếu phân phối hậu nghiệm $p(\theta | \mathbf{x}_1, \dots,
-\mathbf{x}_N)$ có cùng dạng với phân phối tiên nghiệm $p(\theta)$, hai phân phối này được gọi là cặp \textit{phân phối liên hợp} (conjugate distribution), và $p(\theta)$ được
+\mathbf{x}_N)$ có cùng dạng với phân phối tiên nghiệm $p(\theta)$, hai phân phối này được gọi là cặp \textit{phân phối liên hợp} (conjugate distribution) và $p(\theta)$ được
 gọi là \textit{tiên nghiệm liên hợp} của hàm hợp lý $p(\mathbf{x}_1, \dots,
 \mathbf{x}_N | \theta)$. Ta sẽ thấy rằng bài toán MAP và MLE có cấu trúc giống nhau. 
 % Nếu \textit{posterior distribution} $p(\theta \| \mathbf{X})$ và \textit{likelihood} $p(\mathbf{X} \|\theta)$ có cùng \textit{họ} (family), thì \textit{prior distribution} là \textit{conjugate distribution} của \textit{likelihood distribution}. 
@@ -446,7 +446,7 @@ và liên hợp của nó, phân phối beta, có hàm phân mật độ xác su
 \end{equation} 
 Bỏ qua thành phần hằng số chỉ mang mục đích chuẩn hoá, ta có thể nhận thấy rằng
 phần còn lại của phân phối beta có cùng dạng với phân phối Bernoulli. Cụ thể,
-nếu sử dụng phân phối beta làm tiên nghiệm cho tham số $\lambda$, và bỏ qua
+nếu sử dụng phân phối beta làm tiên nghiệm cho tham số $\lambda$ và bỏ qua
 phần thừa số hằng số, hậu nghiệm sẽ có dạng
 \begin{eqnarray} 
 \nonumber 
@@ -564,7 +564,7 @@ các siêu tham số $\alpha = \beta$ lớn.
 % \end{eqnarray} 
 % ta có thể thấy rằng hàm mục tiêu có dạng $\L(\theta) + \lambda R(\theta)$ giống
 % như trong regularization, với hàm log-likelihood đóng vai trò như hàm mất mát
-% $\L(\theta)$, và log của prior đóng vai trò như hàm $R(\theta)$. Ta có thể nói
+% $\L(\theta)$ và log của prior đóng vai trò như hàm $R(\theta)$. Ta có thể nói
 % rằng, MAP chính là một phương pháp giúp tránh overfitting trong các mô hình
 % machine learning thống kê. MAP đặc biệt hữu ích khi tập huấn luyện là nhỏ. 
 
@@ -601,7 +601,7 @@ các siêu tham số $\alpha = \beta$ lớn.
 
      
     \item Tiên nghiệm thường được chọn dựa trên các thông tin biết trước của
-    tham số, và phân phối được chọn thường là các phân phối liên hợp của likelihood.
+    tham số và phân phối được chọn thường là các phân phối liên hợp của likelihood.
      
     \item MAP có thể được coi như một phương pháp giúp tránh thiên lệch khi có
     ít dữ liệu huấn luyện.

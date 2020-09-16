@@ -5,7 +5,7 @@
 \section{Bài toán phân biệt giới tính dựa trên ảnh khuôn mặt }
 Chúng ta cùng bắt đầu với bài toán phân biệt giới tính dựa trên ảnh khuôn mặt. Về ảnh khuôn mặt, bộ cơ sở dữ liệu \href{http://www2.ece.ohio-state.edu/~aleix/ARdatabase.html}{AR Face Database} được sử dụng rộng rãi.  
  
-Bộ cơ sở dữ liệu này bao gồm hơn 4000 ảnh màu tương ứng với khuôn mặt của 126 người (70 nam, 56 nữ). Với mỗi người, 26 bức ảnh được chụp ở các điều kiện ánh sáng khác nhau, sắc thái biểu cảm khuôn mặt khác nhau, và bị che mắt (bởi kính râm) hoặc miệng (bởi khăn); và được chụp tại hai thời điểm khác nhau cách nhau 2 tuần.  
+Bộ cơ sở dữ liệu này bao gồm hơn 4000 ảnh màu tương ứng với khuôn mặt của 126 người (70 nam, 56 nữ). Với mỗi người, 26 bức ảnh được chụp ở các điều kiện ánh sáng khác nhau, sắc thái biểu cảm khuôn mặt khác nhau và bị che mắt (bởi kính râm) hoặc miệng (bởi khăn); và được chụp tại hai thời điểm khác nhau cách nhau 2 tuần.  
  
 Để cho đơn giản, tôi sử dụng bộ cơ sử AR Face thu gọn (có thể tìm thấy trong cùng trang web phía trên, mục \textit{Other (relevant) downloads}). Bộ cơ sở dữ liệu thu gọn này bao gồm 2600 bức ảnh từ 50 nam và 50 nữ. Hơn nữa, các khuôn mặt cũng đã được xác định chính xác và được \textit{cropped} với kích thước 165 x 120 (pixel) bằng phương pháp được mô tả trong bài báo \href{http://lectures.molgen.mpg.de/networkanalysis13/PCAversusLDA_eigenfaces.pdf}{PCA veus LDA}. Tôi xin bỏ qua phần xử lý này và trực tiếp sử dụng ảnh đã cropped như một số ví dụ dưới đây: 
  
@@ -482,7 +482,7 @@ Có thể tổng quát thành:
 \mathbf{W} = \mathbf{W} + \eta\mathbf{x}_i(\mathbf{y}_i - \mathbf{z}_i)^T 
 \end{equation} 
  
-Với $\mathbf{W}, \mathbf{y}_i, \mathbf{z}_i$ lần lượt là ma trận trọng số, vector (cột) output \textit{thật} với toàn bộ các binary classifiers tương ứng với điểm dữ liệu $\mathbf{x}_i$, và vector output tìm được của networks tại thời điểm đang xét nếu đầu vào mỗi network là $\mathbf{x}_i$. Chú ý rằng với Logistic Regression, vector $\mathbf{y}_i$ là một binary vector, vector $\mathbf{z}_i$ gồm các phần tử nằm trong khoảng $(0, 1)$.  
+Với $\mathbf{W}, \mathbf{y}_i, \mathbf{z}_i$ lần lượt là ma trận trọng số, vector (cột) output \textit{thật} với toàn bộ các binary classifiers tương ứng với điểm dữ liệu $\mathbf{x}_i$ và vector output tìm được của networks tại thời điểm đang xét nếu đầu vào mỗi network là $\mathbf{x}_i$. Chú ý rằng với Logistic Regression, vector $\mathbf{y}_i$ là một binary vector, vector $\mathbf{z}_i$ gồm các phần tử nằm trong khoảng $(0, 1)$.  
  
  
 \subsection{Hạn chế của one-vs-rest}

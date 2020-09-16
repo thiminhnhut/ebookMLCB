@@ -24,7 +24,7 @@ $P$, cải thiện theo kinh nghiệm $E$.
 
 Lấy ví dụ về một chương trình máy tính có khả năng tự chơi cờ vây. Chương trình này tự học từ các ván cờ đã chơi trước đó của con người để tính toán ra các chiến thuật hợp lý nhất. Mục đích của việc học này là tạo ra một chương trình có khả năng giành phần thắng cao. Chương trình này cũng có thể tự cải thiện khả năng của mình bằng cách chơi hàng triệu ván cờ với chính nó. Trong ví dụ này, chương trình máy tính có nhiệm vụ chơi cờ vây thông qua kinh nghiệm là {các ván cờ đã chơi} với chính nó và của con người. Phép đánh giá ở đây chính là khả năng giành chiến thắng của chương trình.
 
-Để xây dựng một chương trình máy tính có khả năng học, ta cần xác định rõ ba yếu tố: nhiệm vụ, phép đánh giá, và nguồn dữ liệu huấn luyện. Bạn đọc sẽ hiểu rõ hơn về các yếu tố này qua các mục còn lại của chương. 
+Để xây dựng một chương trình máy tính có khả năng học, ta cần xác định rõ ba yếu tố: nhiệm vụ, phép đánh giá và nguồn dữ liệu huấn luyện. Bạn đọc sẽ hiểu rõ hơn về các yếu tố này qua các mục còn lại của chương. 
 
 \section{Dữ liệu}
 \index{die@điểm dữ liệu -- data point}
@@ -42,14 +42,14 @@ học được, các điểm dữ liệu thường được đưa về dạng t�
 
 Có những loại dữ liệu được biểu diễn dưới dạng ma trận hoặc mảng nhiều chiều.
 Một bức ảnh xám có thể được coi là một ma trận mà mỗi phần tử là giá trị độ sáng
-của điểm ảnh tương ứng. Một bức ảnh màu ba kênh đỏ, lục, và lam có thể được biểu
+của điểm ảnh tương ứng. Một bức ảnh màu ba kênh đỏ, lục và lam có thể được biểu
 diễn bởi một mảng ba chiều. Trong cuốn sách này, các điểm dữ liệu đều được biểu
 diễn dưới dạng mảng một chiều, còn được gọi là \textit{vector đặc trưng} (feature vector). Vector đặc trưng của một điểm dữ liệu thường được ký hiệu là $\bx \in \R^d$ trong đó $d$ là số lượng đặc trưng. Các mảng nhiều chiều được hiểu là đã bị \textit{vector hoá} (vectorized) thành mảng một chiều. Kỹ thuật xây dựng vector đặc trưng cho dữ liệu được trình bày cụ thể hơn trong Chương~\ref{cha:feature}.
 
 % Một mô hình machine learning được mô tả bởi một bộ các tham số và siêu tham số. 
 \textit{Kinh nghiệm} trong machine learning là bộ dữ liệu được sử dụng để xây
 dựng mô hình. Trong quá trình xây dựng mô hình, bộ dữ liệu thường được chia ra
-làm ba tập dữ liệu không giao nhau: tập huấn luyện, tập kiểm tra, và tập xác thực.
+làm ba tập dữ liệu không giao nhau: tập huấn luyện, tập kiểm tra và tập xác thực.
 
 
 
@@ -64,7 +64,7 @@ Một mô hình hoạt động hiệu quả trên tập huấn luyện chưa ch�
 
 \index{học trực tuyến -- online learning}
 \index{học ngoại tuyến -- offline learning}
-\textbf{Lưu ý:} Ranh giới giữa tập huấn luyện, tập xác thực, và tập kiểm tra
+\textbf{Lưu ý:} Ranh giới giữa tập huấn luyện, tập xác thực và tập kiểm tra
 đôi khi không rõ ràng. Dữ liệu thực tế thường không cố định mà thường xuyên được
 cập nhật. Khi có thêm dữ liệu, dữ liệu kiểm thử ở mô hình cũ có thể trở thành dữ
 liệu huấn luyện trong mô hình mới. Trong phạm vi cuốn sách, chúng ta chỉ xem xét
@@ -103,7 +103,7 @@ các mô hình có dữ liệu cố định.
 % một \textit{vetor đặc trưng} \footnote{Có những loại dữ liệu được biểu diễn dưới
 % dạng ma trận hoặc mảng nhiều chiều. Một bức ảnh xám có thể được coi là một ma
 % trận mà mỗi phần tử là giá trị độ sáng của điểm ảnh tương ứng. Một bức ảnh màu
-% ba kênh đỏ, lục, và lam có thể được biểu diễn bởi một mảng ba chiều. Trong cuốn
+% ba kênh đỏ, lục và lam có thể được biểu diễn bởi một mảng ba chiều. Trong cuốn
 % sách này, các điểm dữ liệu đều được biểu diễn dưới dạng vector, các mảng nhiều
 % chiều }
 
@@ -152,7 +152,7 @@ Trong bài toán này, việc xây dựng mô hình tương đương với việ
 
 % Nhãn này thường là một phần
 % tử trong một tập hợp có $C$ phần tử khác nhau. Mỗi phần tử trong tập hợp này
-% được gọi là một \textit{lớp} (\textit{class}), và thường được đánh số từ $1$ đến
+% được gọi là một \textit{lớp} (\textit{class}) và thường được đánh số từ $1$ đến
 % $C$. Để giải bài toán này, ta thường phải xây dựng một hàm số $f: \R^d
 % \rightarrow \{1, 2, \dots, C\}$. Khi $y = f(\bx)$, mô hình gán cho một điểm dữ
 % liệu được mô tả bởi vector đặc trưng $\bx$ một nhãn được xác định bởi số $y$.
@@ -424,7 +424,7 @@ phức tạp cực kỳ cao}\footnote{\textit{Google DeepMind's AlphaGo: How it 
 (\url{https://goo.gl/nDNcCy}).} với tổng số thế cờ xấp xỉ $10^{761} $, con số
 này ở cờ vua là $10^{120}$ và tổng số nguyên tử trong toàn vũ trụ là khoảng
 $10^{80}$!! Hệ thống phải chọn ra một chiến thuật tối ưu trong số hàng nhiều tỉ
-tỉ lựa chọn, và tất nhiên việc thử tất cả các lựa chọn là không khả thi. Về cơ
+tỉ lựa chọn và tất nhiên việc thử tất cả các lựa chọn là không khả thi. Về cơ
 bản, AlphaGo bao gồm các thuật toán thuộc cả học có giảm sát và học củng cố.
 Trong phần học có giám sát, dữ liệu từ các ván cờ do con người chơi với nhau
 được đưa vào để huấn luyện. Tuy nhiên, mục đích cuối cùng của AlphaGo không dừng
@@ -685,7 +685,7 @@ thành phần cơ bản của một hệ thống machine learning.
 % vây được xem là có độ phức tạp cực kỳ cao} với tổng số nước đi là xấp xỉ
 % $10^{761} $, so với cờ vua là $10^{120} $ và tổng số nguyên tử trong toàn vũ trụ
 % là khoảng $10^{80}$!! Vì vậy, thuật toán phải chọn ra 1 nước đi tối ưu trong số
-% hàng nhiều tỉ tỉ lựa chọn, và tất nhiên, không thể áp dụng thuật toán tương tự
+% hàng nhiều tỉ tỉ lựa chọn và tất nhiên, không thể áp dụng thuật toán tương tự
 % như \href{https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer}{IBM Deep
 % Blue}) (IBM Deep Blue đã thắng con người trong môn cờ vua 20 năm trước). Về cơ
 % bản, AlphaGo bao gồm các thuật toán thuộc cả Supervised learning và

@@ -45,7 +45,7 @@ xây dựng mô hình đánh giá khả năng đỗ của một sinh viên dựa
 ôn tập. Dữ liệu trong Bảng~\ref{tab:10_1} được mô tả trên Hình \ref{fig:10_1}.
 Nhìn chung, thời gian học càng nhiều thì khả năng đỗ càng cao. Tuy nhiên, không
 có một ngưỡng thời gian học nào giúp phân biệt rạch ròi việc đỗ/trượt . Nói cách
-khác, dữ liệu của hai tập này là không tách biệt tuyến tính, và vì vậy PLA sẽ
+khác, dữ liệu của hai tập này là không tách biệt tuyến tính và vì vậy PLA sẽ
 không hữu ích. Tuy nhiên, thay vì dự đoán chính xác hai giá trị đỗ/trượt,
 ta có thể dự đoán xác suất để một sinh viên thi đỗ dựa trên thời gian ôn thi.
 
@@ -698,7 +698,7 @@ def predict(w, X, threshold = 0.5):
     \centering
         \includegraphics[width = .9\textwidth]{Chapters/05_NeuralNetworks/10_logisticregression/latex/3models.pdf}
         % \includegraphics[width = \textwidth]{}
-        \caption[]{Biểu diễn hồi quy tuyến tính, PLA, và hồi quy logistic
+        \caption[]{Biểu diễn hồi quy tuyến tính, PLA và hồi quy logistic
         dưới dạng neural network.}
         \label{fig:10_8}
     \end{figure}
@@ -872,7 +872,7 @@ số {5} bị phân loại lỗi bởi bộ phân loại đầu tiên thì cuố
  
  
 \subsection{Mã hoá nhị phân}
-Có một cách tiếp tục giảm số bộ phân loại là \textit{mã hoá nhị phân}. Trong phương pháp này, mỗi nhãn được mã hoá bởi một số nhị phân. Ví dụ, nếu có bốn nhãn thì chúng được mã hoá bởi 00, 01, 10, và 11. Số bộ phân loại nhị phân cần xây dựng chỉ là $m =
+Có một cách tiếp tục giảm số bộ phân loại là \textit{mã hoá nhị phân}. Trong phương pháp này, mỗi nhãn được mã hoá bởi một số nhị phân. Ví dụ, nếu có bốn nhãn thì chúng được mã hoá bởi 00, 01, 10 và 11. Số bộ phân loại nhị phân cần xây dựng chỉ là $m =
 \left\lceil\log_2(C)\right\rceil$ trong đó $C$ là số nhãn, $\left\lceil a
 \right\rceil$ là {số nguyên nhỏ nhất không nhỏ hơn} $a$. Bộ phân loại đầu tiên giúp xác định bit đầu tiên của nhãn, bộ thứ hai xác định bit tiếp theo,....
 Cách làm này sử dụng một số lượng nhỏ nhất các bộ phân loại nhị phân. Tuy

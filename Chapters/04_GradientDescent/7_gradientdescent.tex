@@ -65,7 +65,7 @@ phía phải thì đạo hàm càng dương.
 Trong machine learning nói riêng và toán tối ưu nói chung, chúng ta thường xuyên
 phải tìm các cực tiểu toàn cục của một hàm số. Nếu chỉ xét riêng các hàm khả vi,
 việc giải phương trình đạo hàm bằng không có thể phức tạp hoặc có vô số nghiệm.
-Thay vào đó, người ta thường tìm các điểm cực tiểu địa phương, và coi đó là một
+Thay vào đó, người ta thường tìm các điểm cực tiểu địa phương và coi đó là một
 nghiệm cần tìm của bài toán trong những trường hợp nhất định.
 
 Các điểm cực tiểu địa phương là nghiệm của phương trình đạo hàm bằng không (ta
@@ -95,7 +95,7 @@ quan sát sau đây:
 \begin{itemize}
     \item Nếu đạo hàm của hàm số tại $x_{t}$ là dương ($f'(x_{t}) > 0$) thì
     $x_t$ nằm
-    về bên phải so với $x^*$, và ngược lại. Để điểm tiếp theo $x_{t+1}$ gần với
+    về bên phải so với $x^*$ và ngược lại. Để điểm tiếp theo $x_{t+1}$ gần với
     $x^*$ hơn, ta cần di chuyển $x_t$ về bên trái, tức về phía
     \textit{âm}. Nói các khác, \textit{ta cần di chuyển $x_t$ ngược dấu với đạo hàm}:
     \begin{equation} 
@@ -1071,7 +1071,7 @@ Trong thực nghiệm, chúng ta có thể kết hợp các phương pháp sau:
 % Dưới đây là một ví dụ kinh điển trên Wikipedia về việc Newton's method cho một dãy số phân kỳ (divergence). 
 % <div class="imgcap"> 
 %  <img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/NewtonsMethodConvergenceFailure.svg/300px-NewtonsMethodConvergenceFailure.svg.png" align = "center" width = "400"> 
-%  <div class = "thecap"> Hình 4: Nghiệm là một điểm gần -2. Tiếp tuyến của đồ thị hàm số tại điểm có hoành độ bằng 0 cắt trục hoành tại 1, và ngược lại. Trong trường hợp này, Newton's method không bao giờ hội tụ. (Nguồn: <a href = "https://en.wikipedia.org/wiki/Newton's_method">Wikipedia</a>). </div> 
+%  <div class = "thecap"> Hình 4: Nghiệm là một điểm gần -2. Tiếp tuyến của đồ thị hàm số tại điểm có hoành độ bằng 0 cắt trục hoành tại 1 và ngược lại. Trong trường hợp này, Newton's method không bao giờ hội tụ. (Nguồn: <a href = "https://en.wikipedia.org/wiki/Newton's_method">Wikipedia</a>). </div> 
 % </div> 
  
 % \item Nhận thấy rằng trong việc giải phương trình $f(x) = 0$, chúng ta có đạo hàm ở mẫu số. Khi đạo hàm này gần với 0, ta sẽ được một đường thằng song song hoặc gần song song với trục hoành. Ta sẽ hoặc không tìm được giao điểm, hoặc được một giao điểm ở vô cùng. Đặc biệt, khi nghiệm chính là điểm có đạo hàm bằng 0, thuật toán gần như sẽ không tìm được nghiệm! 

@@ -169,7 +169,7 @@ Vì biểu thức trong dấu $\sum$ chỉ phụ thuộc vào các sản phẩm 
 giá bởi người dùng thứ $n$ (tương ứng với các $r_{mn}  = 1$), ta có thể đơn
 giản~\eqref{eqn:25_2} bằng cách đặt $\hat{\bX}_n$ là ma trận con được tạo bởi
 các cột của $\bX$ tương ứng với các sản phẩm đã được đánh giá bởi
-người dùng $n$, $\hat{\bb}_n$ là vector điều chỉnh con tương ứng, và
+người dùng $n$, $\hat{\bb}_n$ là vector điều chỉnh con tương ứng và
 $\hat{\mathbf{y}}_n$ là các đánh giá tương ứng. Khi đó,
 \begin{equation}
 \mathcal{L}_1(\mathbf{w}_n, d_n) = \frac{1}{2s} \|\hat{\bX}^T_n\bw_n +
@@ -206,7 +206,7 @@ Tương tự, mỗi cột $\bx_m$ của $\bX$ và $b_m$ sẽ được tìm bằn
 \end{eqnarray}
 Đặt $\hat{\bW}_m$ là ma trận con tạo bởi các cột của $\bW$ ứng
 với các người dùng đã đánh giá sản phẩm $m$, $\hat{\bd}_m$ là vector điều chỉnh con
-tương ứng, và $\hat{\mathbf{y}}^m$ là vector các đánh giá tương ứng. Bài
+tương ứng và $\hat{\mathbf{y}}^m$ là vector các đánh giá tương ứng. Bài
 toán~\eqref{eqn:25_xm} trở thành
 \begin{equation}
 \mathcal{L}(\bx_m, b_m)
@@ -389,7 +389,7 @@ RMSE thu được là 0.9621, tốt hơn so với NBCF trong chương trước (
 % y_{mn} \approx \bx_m \bw_n + b_m + d_n + \mu
 % \end{equation}
 
-% với $b_m, d_n, \mu$ lần lượt là bias của sản phẩm $m$, người dùng $n$, và giá trị trung bình của toàn bộ các \textit{ratings} (là hằng số).
+% với $b_m, d_n, \mu$ lần lượt là bias của sản phẩm $m$, người dùng $n$ và giá trị trung bình của toàn bộ các \textit{ratings} (là hằng số).
 
 % Lúc này, hàm mất mát có thể được thay đổi thành:
 % \begin{eqnarray}
@@ -441,7 +441,7 @@ chỉnh nhỏ} ({incremental matrix factorization})~\cite{vinagre2014fast}, đư
 
 \item Có nhiều các giải bài toán tối ưu của phân tích ma trận ngoài cách áp dụng gradient descent. Bạn đọc có thể xem thêm
 \textit{alternating least square (ALS)} (\url{https://goo.gl/g2M4fb}),
-\textit{generalized low rank models} (\url{https://goo.gl/DrDWyW}), và
+\textit{generalized low rank models} (\url{https://goo.gl/DrDWyW}) và
 \textit{phân tích giá trị suy biến}~\cite{sarwar2002incremental,paterek2007improving}.
 Chương~\ref{cha:svd} sẽ trình bày kỹ về phân tích giá trị suy biến.
 % \href{https://en.wikipedia.org/wiki/Singular_value_decomposition}{Singular Value Decomposition (SVD)}, một phương pháp phổ biến trong Matrix Factorization, được sử dụng không những trong (Recommendation) Systems mà còn trong nhiều hệ thống khác.

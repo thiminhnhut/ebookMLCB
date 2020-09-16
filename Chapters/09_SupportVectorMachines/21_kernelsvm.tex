@@ -200,7 +200,7 @@ liệu đơn giản hơn việc tính từng $\Phi(.)$ rồi nhân chúng với 
 trị thu được là một số vô hướng thay vì hai vector năm chiều
 $\Phi(\bx), \Phi(\bz)$. 
  
-Hàm hạt nhân cần có những tính chất gì, và những hàm nào được sử dụng phổ biến?  
+Hàm hạt nhân cần có những tính chất gì và những hàm nào được sử dụng phổ biến?  
  
 % \newpage 
 \section{Hàm số hạt nhân}
@@ -480,7 +480,7 @@ Accuracy: 94.22 %
 \end{lstlisting}
 Kết quả thu được là khoảng 94\%. Nếu chọn nhiều điểm dữ liệu huấn luyện hơn và
 thay đổi các tham số \pythoninline{gamma, coef0}, bạn đọc có thể sẽ thu được
-kết quả tốt hơn. Đây là một bài toán phân loại đa lớp, và
+kết quả tốt hơn. Đây là một bài toán phân loại đa lớp và
 kỹ thuật giải quyết của thư viện này là \textit{one-vs-rest}. Như đã đề cập trong
 Chương~\ref{cha:logisticregression}, \textit{one-vs-rest} có nhiều hạn chế vì
 phải huấn luyện nhiều bộ phân loại. Hơn nữa, với SVM hạt nhân, việc tính toán các
@@ -493,7 +493,7 @@ hàm hạt nhân cũng trở nên phức tạp khi lượng dữ liệu và số
     \item Trong bài toán phân loại nhị phân, nếu dữ liệu hai lớp {không tách biệt tuyến tính}, chúng ta có thể tìm cách biến đổi dữ liệu sao cho chúng (gần) tách biệt tuyến tính trong không gian mới. 
      
     \item Việc tính toán trực tiếp hàm $\Phi()$ đôi khi phức tạp và tốn nhiều bộ nhớ. Thay vào đó, ta có thể sử dụng thủ thuật hạt nhân. Trong cách tiếp cận này, ta chỉ cần tính tích vô hướng của hai vector bất kỳ trong không gian mới: $k(\mathbf{x}, \mathbf{z}) = \Phi(\mathbf{x})^T\Phi(\mathbf{z})$. 
-    Thông thường, các hàm $k(., .)$ thỏa mãn điều kiện Mercer, và được
+    Thông thường, các hàm $k(., .)$ thỏa mãn điều kiện Mercer và được
     gọi là hàm hạt nhân. Cách giải bài toán SVM với hàm hạt nhân hoàn toàn giống cách giải bài toán tối ưu trong SVM lề mềm. 
      
     \item Có bốn hàm hạt nhân thông dụng: \pythoninline{linear},

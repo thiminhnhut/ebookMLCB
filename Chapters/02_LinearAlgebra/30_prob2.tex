@@ -50,7 +50,7 @@
 
 % Trong nửa còn lại, tôi sẽ đi vào một mảng lớn khác của ML trong đó các kiến thức về xác suất thống kê được áp dụng rất nhiều, tôi tạm gọi phần này là Bayesian Machine Learning. Các bạn sẽ từ từ được ôn lại kiến thức về Xác Suất Thống Kê và làm quen với các thuật toán Machine Learning cơ bản khác.
 
-% Trong bài viết này, tôi sẽ ôn tập lại những kiến thức về Xác Suất thường được sử dụng trong Machine Learning. Mục 2 sẽ nhắc lại về biến ngẫu nhiên, xác suất đồng thời, xác suất biên, xác suất có điều kiện, và quy tắc Bayes. Mục 3 sẽ nhác lại một vài phân bố xác suất thường dùng.
+% Trong bài viết này, tôi sẽ ôn tập lại những kiến thức về Xác Suất thường được sử dụng trong Machine Learning. Mục 2 sẽ nhắc lại về biến ngẫu nhiên, xác suất đồng thời, xác suất biên, xác suất có điều kiện và quy tắc Bayes. Mục 3 sẽ nhác lại một vài phân bố xác suất thường dùng.
 
 {Chương này được viết dựa trên Chương 2 và 3 của cuốn \textit{Computer Vision:  Models, Learning, and Inference -- Simon J.D. Prince} (\url{https://goo.gl/GTEXzd}).}
 
@@ -92,7 +92,7 @@ ngẫu nhiên rời rạc, xác suất để đầu ra bằng {chính xác} mộ
 lý thuyết là bằng không. Thay vào đó, phân phối của biến ngẫu nhiên rời rạc
 thường được xác định dựa trên xác suất để đầu ra rơi vào một khoảng giá trị nào
 đó. Việc này được mô tả bởi một hàm số được gọi là \textit{hàm mật độ xác suất} (probability density function, pdf). Hàm mật độ xác suất
-luôn cho giá trị dương, và tích phân của nó trên toàn miền giá trị đầu ra phải
+luôn cho giá trị dương và tích phân của nó trên toàn miền giá trị đầu ra phải
 bằng một.
 \index{hàm mật độ xác suất -- probability density function}
 \index{probability density function -- hàm mật độ xác suất}
@@ -135,7 +135,7 @@ quốc gia, biến ngẫu nhiên $y$ thể hiện điểm thi môn Vật Lý cũ
 \textit{đồng thời} $x^*$ điểm môn Toán và $y^*$ điểm môn Vật lý với
 toàn bộ số học sinh của trường đó. Tỉ lệ này có thể coi là xác suất khi số học
 sinh trong trường là lớn. Ở đây $x^*$ và $y^*$ là các số xác định. Thông thường,
-xác suất này được viết gọn lại thành $p(x^*, y^*)$, và $p(x, y)$ được dùng như
+xác suất này được viết gọn lại thành $p(x^*, y^*)$ và $p(x, y)$ được dùng như
 một hàm tổng quát để mô tả các xác suất.
 
 Giả sử thêm rằng điểm các môn là các số tự nhiên từ 1 đến 10.
@@ -252,7 +252,7 @@ thời $p(x, y)$. Quay lại Hình~\ref{fig:30_1} ở khu vực ``Xác suất c�
 kiện''. Nếu biết rằng $y = 9$, xác suất $p(x | y = 9)$ có thể tính được dựa trên
 hàng thứ chín của hình vuông trung tâm, tức hàng $p(x, y = 9)$. Xác suất $p(x | y =
 9) $ lớn nếu $p(x, y= 9)$ lớn. Chú ý rằng tổng các xác suất $\sum_{x} p(x,
-y = 9)$ nhỏ hơn một, và bằng tổng các xác suất trên hàng thứ chín này. Để thoả
+y = 9)$ nhỏ hơn một và bằng tổng các xác suất trên hàng thứ chín này. Để thoả
 mãn điều kiện tổng các xác suất bằng một, ta cần chia mỗi đại lượng $p(x, y =
 9)$ cho tổng của hàng này, tức là
 \begin{equation}
@@ -427,7 +427,7 @@ của bộ dữ liệu này được tính theo công thức
 \bar{x} &=& \frac{1}{N}\sum_{n=1}^N x_n = \frac{1}{N}\mathbf{x1},\\\
 \sigma^2 &=& \frac{1}{N} \sum_{n=1}^N (x_n - \bar{x})^2,
 \end{eqnarray}
-với $\bx = \bmt x_1, x_2, \dots, x_N\emt $, và $\mathbf{1} \in \mathbb{R}^N$ là
+với $\bx = \bmt x_1, x_2, \dots, x_N\emt $ và $\mathbf{1} \in \mathbb{R}^N$ là
 vector cột chứa toàn phần tử 1. Kỳ vọng đơn giản là trung bình cộng của toàn bộ
 các giá trị. Phương sai là trung bình cộng của bình phương khoảng cách từ mỗi
 điểm tới kỳ vọng. Phương sai càng nhỏ, các điểm dữ liệu càng gần với kỳ vọng,
@@ -554,7 +554,7 @@ Hai đẳng thức này thường được viết gọn lại thành
 p(x) = \lambda^x (1 - \lambda)^{1 - x},
 \end{equation}
 với giả định $0 ^0 = 1$. Thật vậy, $p(0) = \lambda^0 (1 - \lambda)^1 = 1 -
-\lambda$, và $p(1) = \lambda^1 (1 - \lambda)^0 = \lambda$.
+\lambda$ và $p(1) = \lambda^1 (1 - \lambda)^0 = \lambda$.
 
 
 Phân phối Bernoulli thường được ký hiệu ngắn gọn dưới dạng
@@ -633,7 +633,7 @@ trên Hình~\ref{fig:30_2a}.
 \label{fig:30_2b}
 \end{subfigure}
 \caption{
-Ví dụ về hàm mật độ xác suất của (a) phân phối chuẩn một chiều, và (b) phân
+Ví dụ về hàm mật độ xác suất của (a) phân phối chuẩn một chiều và (b) phân
 phối chuẩn hai chiều.}
 \label{fig:30_2}
 \end{figure}

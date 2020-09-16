@@ -75,7 +75,7 @@ Chúng ta sẽ tìm hiểu SVM đa lớp qua ví dụ về bài toán phân lo�
  
 Bộ cơ sở dữ liệu CIFAR10 gồm 60000 ảnh có kích thước $32 \times 32$ điểm ảnh
 thuộc 10 lớp dữ liệu: \textit{plane, car, bird, cat, deer, dog, frog, horse,
-ship, và truck}. Một vài ví dụ của mỗi lớp được hiển thị trong Hình \ref{fig:22_2}.
+ship và truck}. Một vài ví dụ của mỗi lớp được hiển thị trong Hình \ref{fig:22_2}.
 Tập huấn luyện gồm 50000 bức ảnh, tập kiểm tra gồm 10000 ảnh còn lại.
 Trong số 50000 ảnh huấn luyện, 1000 ảnh sẽ được lấy ra ngẫu nhiên làm tập xác
 thực.
@@ -248,7 +248,7 @@ Hình~\ref{fig:22_6}. Ta gọi đại lượng $\Delta$ này là \textit{lề an
 Nếu điểm số tương ứng với nhãn thực sự lớn hơn các điểm số khác một lượng bằng
 lề an toàn $\Delta$ thì mất mát bằng không. Nói các khác, những điểm số nằm bên
 trái điểm $\times$ không gây ra mất mát nào. Ngược lại, các điểm số nằm bên phải
-của $\times$ cần bị \textit{xử phạt}, và mức xử phạt tỉ lệ thuận với độ vi
+của $\times$ cần bị \textit{xử phạt} và mức xử phạt tỉ lệ thuận với độ vi
 phạm (mức độ vượt quá ranh giới an toàn $\times$).
  
 Để mô tả các mức vi phạm này dưới dạng toán học, trước hết ta giả sử rằng các

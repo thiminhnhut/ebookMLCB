@@ -6,7 +6,7 @@
 \index{lồi -- convex}
 % \index{convex optimization} 
 \section{Giới thiệu}
-% Nếu bạn đã đọc các bài trước trong \href{machinelearningcoban.com}{Blog Machine Learning cơ bản}, chúng ta đã làm quen với rất nhiều bài toán tối ưu. Học Machine Learning là phải học Toán Tối Ưu, và để hiểu hơn về Toán Tối Ưu, với tôi cách tốt nhất là tìm hiểu các thuật toán Machine Learning. 
+% Nếu bạn đã đọc các bài trước trong \href{machinelearningcoban.com}{Blog Machine Learning cơ bản}, chúng ta đã làm quen với rất nhiều bài toán tối ưu. Học Machine Learning là phải học Toán Tối Ưu và để hiểu hơn về Toán Tối Ưu, với tôi cách tốt nhất là tìm hiểu các thuật toán Machine Learning. 
 \index{ràng buộc -- constraint}
 \index{bài toán tối ưu không ràng buộc -- unconstrained optimization problem}
 \subsection{Bài toán tối ưu}
@@ -49,7 +49,7 @@ Trong đó, vector $\mathbf{x} = [x_1, x_2, \dots, x_n]^T$ được gọi là
 \textit{biến tối ưu} ({optimization variable}). Hàm số $f_0: \mathbb{R}^n
 \rightarrow \mathbb{R}$ được gọi là \textit{hàm mục tiêu} (objective function)\footnote{các hàm mục tiêu trong machine learning thường được gọi là
 \textit{hàm mất mát}}. 
-Các bất phương trình $f_i(\bx) <= 0, i = 1, 2, \dots, m$ được gọi là \textit{bất phương trình ràng buộc} (inequality constraint), và các hàm tương ứng $f_i(\bx), i = 1, 2, \dots, m$ được gọi là \textit{hàm bất phương trình ràng buộc} (inequality constraint function). Các phương trình $h_j(\bx) = 0, j = 1, 2, \dots, p$ được gọi là các \textit{phương trình ràng buộc} (equality constraint), các hàm tương ứng là các \textit{hàm phương trình ràng buộc} (equality constraint function).
+Các bất phương trình $f_i(\bx) <= 0, i = 1, 2, \dots, m$ được gọi là \textit{bất phương trình ràng buộc} (inequality constraint) và các hàm tương ứng $f_i(\bx), i = 1, 2, \dots, m$ được gọi là \textit{hàm bất phương trình ràng buộc} (inequality constraint function). Các phương trình $h_j(\bx) = 0, j = 1, 2, \dots, p$ được gọi là các \textit{phương trình ràng buộc} (equality constraint), các hàm tương ứng là các \textit{hàm phương trình ràng buộc} (equality constraint function).
 
 \index{tập xác định -- domain}
 \def\dom{\boldsymbol{\mathbf{dom}}}
@@ -359,7 +359,7 @@ $\mathbf{x}_1, \mathbf{x}_2$ thuộc giao của các tập lồi thì $(\theta\m
 \index{siêu đa diện -- polyhedra}
 Từ đó suy ra giao của các nửa không gian và nửa mặt phẳng
 là một tập lồi. Chúng là các đa giác lồi trong không gian hai chiều, đa
-diện lồi trong không gian ba chiều, và \textit{siêu đa diện} trong không gian nhiều chiều.
+diện lồi trong không gian ba chiều và \textit{siêu đa diện} trong không gian nhiều chiều.
 Giả sử có $m$ nửa không gian và $p$ siêu phẳng. Mỗi nửa không gian có thể được viết dưới dạng $\mathbf{a}_i^T\mathbf{x} \leq
 b_i, ~\forall i = 1, 2, \dots, m$. Một siêu phẳng có thể được viết
 dưới dạng $\mathbf{c}_i^T\mathbf{x} = d_i, ~\forall i = 1, 2, \dots, p$.
@@ -443,7 +443,7 @@ mặt phẳng. Một hàm số được gọi là \textit{lồi} (convex) nếu 
 là một tập lồi} và đoạn thẳng nối hai điểm bất kỳ trên đồ thị hàm số đó nằm về phía trên hoặc nằm trên đồ thị (xem
 Hình~\ref{fig:16_convexf_def}). 
 \begin{mydef}{Hàm lồi}{cvxfun}
-    Một hàm số $f: \mathbb{R}^n \rightarrow \mathbb{R} $ được gọi là một \textit{hàm lồi} (convex function) nếu $\textbf{dom} f$ là một {tập lồi}, và: 
+    Một hàm số $f: \mathbb{R}^n \rightarrow \mathbb{R} $ được gọi là một \textit{hàm lồi} (convex function) nếu $\textbf{dom} f$ là một {tập lồi} và: 
 \begin{equation*} 
 f(\theta\mathbf{x} + (1 - \theta) \mathbf{y}) \leq \theta f(\mathbf{x}) + (1 - \theta)f(\mathbf{y}) 
 \end{equation*} 
@@ -494,7 +494,7 @@ hàm số có thể không thuộc hai loại trên. Các hàm tuyến tính v�
 \begin{mydef}{Hàm lồi chặt}{strictlycvx}
  Một hàm số $f: \mathbb{R}^n \rightarrow \mathbb{R} $ được gọi là
  \textit{hàm lồi chặt} ({strictly convex function}) nếu $\dom f$ là một
- {tập lồi}, và
+ {tập lồi} và
 \begin{equation*} 
 f(\theta\mathbf{x} + (1 - \theta) \mathbf{y}) < \theta f(\mathbf{x}) + (1 - \theta)f(\mathbf{y}) 
 \end{equation*} 
@@ -768,7 +768,7 @@ các đường đồng mức là các đường khép kín. Khi các đường n
 lồi như trong ba ví dụ này, chỉ có một điểm cực trị và đó cũng là điểm cực trị toàn cục. Nếu để ý, bạn sẽ thấy các
 đường khép kín tạo thành biên của các {tập lồi}. Ở hàng dưới, các đường
 không khép kín. Hình~\ref{fig:16_contoursd} minh hoạ các đường đồng mức của một
-hàm tuyến tính $f(x, y) = x + y$, và là một hàm lồi.
+hàm tuyến tính $f(x, y) = x + y$ và là một hàm lồi.
 Hình~\ref{fig:16_contourse} minh hoạ các đường đồng mức của một hàm lồi (chúng
 ta sẽ sớm chứng minh) nhưng các đường đồng mức không kín.
 Hàm này có chứa $\log$ nên tập xác định là góc phần tư thứ nhất tương ứng với tọa độ dương (chú ý rằng tập hợp điểm có tọa độ dương cũng là một
@@ -965,7 +965,7 @@ $x$ thuộc tập xác định (và tập xác định là lồi).
     \item Hàm $f(x) = x^2 + 5\sin(x)$ không là hàm lồi vì đạo hàm bậc hai $f"(x)
     = 2 - 5\sin(x)$ có thể nhận cả giá trị âm và dương.
      
-    \item Hàm {entropy} chéo là một hàm lồi chặt. Xét hai xác suất $x$ và $1 - x$ ($0 < x < 1$), và $a$ là một hằng số thuộc
+    \item Hàm {entropy} chéo là một hàm lồi chặt. Xét hai xác suất $x$ và $1 - x$ ($0 < x < 1$) và $a$ là một hằng số thuộc
     đoạn $[0, 1]$: $f(x) = -(a \log(x) + (1 - a) \log(1 - x))$ có
     đạo hàm bậc hai $\frac{a}{x^2} + \frac{1 - a}{(1-x)^2}$ là một số dương.
      

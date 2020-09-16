@@ -25,13 +25,13 @@ chính là \href{http://machinelearningcoban.com/2017/06/07/svd/#-truncated-svd}
 \begin{equation} 
   \mathbf{X} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T 
 \end{equation} 
-với $\mathbf{U} \in \mathbb{R}^{D \times D}$ và $\mathbf{V}\in \mathbb{R}^{N\times N}$ là các ma trận trực giao, và $\mathbf{\Sigma} \in \mathbb{R}^{D \times N}$ là ma trận đường chéo (không nhất thiết vuông) với các phần tử trên đường chéo không âm giảm dần, thì nghiệm của bài toán \eqref{eqn:28_1} chính là: 
+với $\mathbf{U} \in \mathbb{R}^{D \times D}$ và $\mathbf{V}\in \mathbb{R}^{N\times N}$ là các ma trận trực giao và $\mathbf{\Sigma} \in \mathbb{R}^{D \times N}$ là ma trận đường chéo (không nhất thiết vuông) với các phần tử trên đường chéo không âm giảm dần, thì nghiệm của bài toán \eqref{eqn:28_1} chính là: 
 \begin{equation} 
   \label{eqn:28_2}
   \mathbf{A} = \mathbf{U}_K \mathbf{\Sigma}_K \mathbf{V}_K^T
 \end{equation} 
  
-với $\mathbf{U} \in \mathbb{R}^{D \times K}$ và $\mathbf{V}\in \mathbb{R}^{N\times K}$ là các ma trận tạo bởi $K$ cột đầu tiên của $\mathbf{U}$ và $\mathbf{V}$, và $\mathbf{\Sigma}_K \in \mathbb{R}^{K \times K}$ là ma trận đường chéo con ứng với $K$ hàng đầu tiên và $K$ cột đầu tiên của $\mathbf{\Sigma}$. 
+với $\mathbf{U} \in \mathbb{R}^{D \times K}$ và $\mathbf{V}\in \mathbb{R}^{N\times K}$ là các ma trận tạo bởi $K$ cột đầu tiên của $\mathbf{U}$ và $\mathbf{V}$ và $\mathbf{\Sigma}_K \in \mathbb{R}^{K \times K}$ là ma trận đường chéo con ứng với $K$ hàng đầu tiên và $K$ cột đầu tiên của $\mathbf{\Sigma}$. 
  
  
 \subsection{Ý tưởng của PCA}
@@ -40,7 +40,7 @@ Trong PCA, như đã chứng minh ở \eqref{eqn:27_10}, PCA là bài toán đi 
 \label{eqn:28_3}
 \mathbf{X} \approx \tilde{\mathbf{X}} = \mathbf{U}_K \mathbf{Z} + \bar{\mathbf{U}}_K \bar{\mathbf{U}}_K^T\bar{\mathbf{x}}\mathbf{1}^T 
 \end{equation} 
-với $\mathbf{U}_K, \bar{\mathbf{U}}_K$ lần lượt là các ma trận được tạo bởi $K$ cột đầu tiên và $D-K$ cột cuối cùng của ma trận trực giao $\mathbf{U}$, và $\bar{\mathbf{x}}$ là vector kỳ vọng của dữ liệu. 
+với $\mathbf{U}_K, \bar{\mathbf{U}}_K$ lần lượt là các ma trận được tạo bởi $K$ cột đầu tiên và $D-K$ cột cuối cùng của ma trận trực giao $\mathbf{U}$ và $\bar{\mathbf{x}}$ là vector kỳ vọng của dữ liệu. 
  
 \textbf{Giả sử rằng vector kỳ vọng $\bar{\mathbf{x}} = \mathbf{0}$}. Khi đó, \eqref{eqn:28_3} tương đương với: 
 \begin{equation} 
@@ -56,7 +56,7 @@ Bài toán tối ưu của PCA sẽ trở thành:
   \text{s.t.:}&& \mathbf{U}_K^T \mathbf{U}_K = \mathbf{I}_K & 
 \end{aligned} 
 \end{equation} 
-với $\mathbf{I}_K \in \mathbb{R}^{K\times K}$ là ma trận đơn vị trong không gian $K$ chiều, và điều kiện ràng buộc là để đảm bảo các cột của $\mathbf{U}_K$ tạo thành một hệ trực chuẩn. 
+với $\mathbf{I}_K \in \mathbb{R}^{K\times K}$ là ma trận đơn vị trong không gian $K$ chiều và điều kiện ràng buộc là để đảm bảo các cột của $\mathbf{U}_K$ tạo thành một hệ trực chuẩn. 
  
  
 \subsection{Quan hệ giữa PCA và SVD}
@@ -66,7 +66,7 @@ Bạn có nhận ra điểm tương đồng giữa hai bài toán tối ưu \eqr
   \mathbf{Z} \quad\text{in}\quad (5) &=& \mathbf{\Sigma}_K \mathbf{V}_K^T \quad \text{in} \quad \eqref{eqn:28_2} 
 \end{eqnarray} 
  
-Như vậy, nếu các điểm dữ liệu được biễu diễn bởi các cột của một ma trận, và trung bình cộng của mỗi hàng của ma trận đó bằng 0 (để cho vector kỳ vọng bằng 0), thì nghiệm của bài toán PCA được rút ra trực tiếp từ Truncated SVD của ma trận đó. Nói cách khác, nghiệm của PCA chính là một trường hợp đặc biệt của bài toán Matrix Factorization giải bằng SVD. 
+Như vậy, nếu các điểm dữ liệu được biễu diễn bởi các cột của một ma trận và trung bình cộng của mỗi hàng của ma trận đó bằng 0 (để cho vector kỳ vọng bằng 0), thì nghiệm của bài toán PCA được rút ra trực tiếp từ Truncated SVD của ma trận đó. Nói cách khác, nghiệm của PCA chính là một trường hợp đặc biệt của bài toán Matrix Factorization giải bằng SVD. 
  
  
 \section{Làm thế nào để chọn chiều của dữ liệu mới}
@@ -193,7 +193,7 @@ Phương pháp Power còn là thuật toán cơ bản trong \href{https://en.wik
  
 Eigenface thực ra chính là PCA. Các Eigenfaces chính là các eigenvectors ứng với các trị riêng lớn nhất của ma trận hiệp phương sai. 
  
-Trong phần này, chúng ta cùng làm một thí nghiệm nhỏ trên cơ sở dữ liệu \href{http://vismod.media.mit.edu/vismod/classes/mas622-00/datasets/}{Yale face database}. Các bức ảnh trong thí nghiệm này đã được căn chỉnh cho cùng với kích thước và khuôn mặt nằm trọn vẹn trong một hình chữ nhật có kích thước $116 \times  98$ pixel. Có tất cả 15 người khác nhau, mỗi người có 11 bức ảnh được chụp ở các điều kiện ánh sáng và cảm xúc khác nhau, bao gồm: 'centerlight', 'glasses', 'happy', 'leftlight', 'noglasses', 'normal', 'rightlight','sad', 'sleepy', 'surprised', và 'wink'. 
+Trong phần này, chúng ta cùng làm một thí nghiệm nhỏ trên cơ sở dữ liệu \href{http://vismod.media.mit.edu/vismod/classes/mas622-00/datasets/}{Yale face database}. Các bức ảnh trong thí nghiệm này đã được căn chỉnh cho cùng với kích thước và khuôn mặt nằm trọn vẹn trong một hình chữ nhật có kích thước $116 \times  98$ pixel. Có tất cả 15 người khác nhau, mỗi người có 11 bức ảnh được chụp ở các điều kiện ánh sáng và cảm xúc khác nhau, bao gồm: 'centerlight', 'glasses', 'happy', 'leftlight', 'noglasses', 'normal', 'rightlight','sad', 'sleepy', 'surprised' và 'wink'. 
  
 Hình \ref{fig:28_1} minh hoạ ví dụ về các bức ảnh của người có id là 10. 
 % <hr> 
@@ -341,7 +341,7 @@ Một ứng dụng của việc này có thể được tìm thấy trong bài b
 \begin{itemize}
 \item PCA là một phương pháp Unsupervised. Việc thực hiện PCA trên toàn bộ dữ liệu không phụ thuộc vào class(nếu có) của mỗi dữ liệu. Việc này đôi khi khiến cho PCA không mang lại hiệu quả cho các bài toán classification. Thật vậy, giả sử trong không gian hai chiều, 2 classes phân bố dọc hai bên của 1 đường thẳng. Như vậy, PCA nhiều khả năng sẽ cho chúng ta giữ lại thành phần chính chính là đường thẳng đó. Khi chiếu dữ liệu lên đường thẳng này, cả hai classes bị trộn lẫn vào nhau, khiến cho việc classification đạt kết quả thấp. Có một phương pháp tương tự như PCA giúp tận dụng thông tin về các class để xác định chiếu theo chiều nào, phương pháp đó có tên là \href{https://en.wikipedia.org/wiki/Linear_discriminant_analysis}{Linear Discriminant Analysis}, sẽ được thảo luận trong bài tiếp theo. 
  
-\item Với các bài toán Large-scale, đôi khi việc tính toán trên toàn bộ dữ liệu là không khả thi vì còn có vấn đề về bộ nhớ. Giải pháp là thực hiện PCA lần đầu trên một tập con dữ liệu vừa với bộ nhớ, sau đó lấy một tập con khác để (incrementally) cập nhật nghiệm của PCA tới khi nào hội tụ. Ý tưởng này khá giống với \href{http://machinelearningcoban.com/2017/01/16/gradientdescent2/#-mini-batch-gradient-descent}{Mini-batch Gradient Descent}, và được gọi là \href{http://cseweb.ucsd.edu/~dasgupta/papers/incremental-pca.pdf}{Incremental PCA}. 
+\item Với các bài toán Large-scale, đôi khi việc tính toán trên toàn bộ dữ liệu là không khả thi vì còn có vấn đề về bộ nhớ. Giải pháp là thực hiện PCA lần đầu trên một tập con dữ liệu vừa với bộ nhớ, sau đó lấy một tập con khác để (incrementally) cập nhật nghiệm của PCA tới khi nào hội tụ. Ý tưởng này khá giống với \href{http://machinelearningcoban.com/2017/01/16/gradientdescent2/#-mini-batch-gradient-descent}{Mini-batch Gradient Descent} và được gọi là \href{http://cseweb.ucsd.edu/~dasgupta/papers/incremental-pca.pdf}{Incremental PCA}. 
  
 \item Ngoài ra, còn rất nhiều hướng mở rộng của PCA, bạn đọc có thể tìm kiếm theo từ khoá: Sparse PCA, Kernel PCA, Robust PCA. 
 \end{itemize}

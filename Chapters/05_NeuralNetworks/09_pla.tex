@@ -132,7 +132,7 @@ Trong trường hợp này, các điểm được khoanh tròn là các điểm 
     J_1(\mathbf{w}) = \sum_{\mathbf{x}_i \in \mathcal{M}} (-y_i\text{sgn}(\mathbf{w}^T\mathbf{x_i})) 
 \end{equation} 
  
-trong đó $\mathcal{M}$ là tập hợp các điểm bị misclassifed (\textit{tập hợp này thay đổi theo} $\mathbf{w}$). Với mỗi điểm $\mathbf{x}_i \in \mathcal{M}$, vì điểm này bị misclassified nên $y_i$ và $\text{sgn}(\mathbf{w}^T\mathbf{x})$ khác nhau, và vì thế $-y_i\text{sgn}(\mathbf{w}^T\mathbf{x_i}) = 1 $. Vậy $J_1(\mathbf{w})$ chính là hàm \textit{đếm} số lượng các điểm bị misclassified. Khi hàm số này đạt giá trị nhỏ nhất bằng 0 thì ta không còn điểm nào bị misclassified.  
+trong đó $\mathcal{M}$ là tập hợp các điểm bị misclassifed (\textit{tập hợp này thay đổi theo} $\mathbf{w}$). Với mỗi điểm $\mathbf{x}_i \in \mathcal{M}$, vì điểm này bị misclassified nên $y_i$ và $\text{sgn}(\mathbf{w}^T\mathbf{x})$ khác nhau và vì thế $-y_i\text{sgn}(\mathbf{w}^T\mathbf{x_i}) = 1 $. Vậy $J_1(\mathbf{w})$ chính là hàm \textit{đếm} số lượng các điểm bị misclassified. Khi hàm số này đạt giá trị nhỏ nhất bằng 0 thì ta không còn điểm nào bị misclassified.  
  
 Một điểm quan trọng, hàm số này là rời rạc, không tính được đạo hàm theo $\mathbf{w}$ nên rất khó tối ưu. Chúng ta cần tìm một hàm mất mát khác để việc tối ưu khả thi hơn. 
  
@@ -304,7 +304,7 @@ và chọn $\alpha = \frac{\beta^2}{\gamma}$, ta có:
 0 \leq u_{\alpha}(t+1) < u_{\alpha}(t) + \beta^2 - 2\alpha\gamma = u_{\alpha}(t) - \beta^2 
 \end{equation} 
  
-Điều này nghĩa là: nếu luôn luôn có các điểm bị misclassified thì dãy $u_{\alpha}(t)$ là dãy giảm, bị chặn dưới bởi 0, và phần tử sau kém phần tử trước ít nhất một lượng là $\beta^2>0$. Điều vô lý này chứng tỏ đến một lúc nào đó sẽ không còn điểm nào bị misclassified. Nói cách khác, thuật toán PLA hội tụ sau một số hữu hạn bước.  
+Điều này nghĩa là: nếu luôn luôn có các điểm bị misclassified thì dãy $u_{\alpha}(t)$ là dãy giảm, bị chặn dưới bởi 0 và phần tử sau kém phần tử trước ít nhất một lượng là $\beta^2>0$. Điều vô lý này chứng tỏ đến một lúc nào đó sẽ không còn điểm nào bị misclassified. Nói cách khác, thuật toán PLA hội tụ sau một số hữu hạn bước.  
  
  
 \section{Mô hình Neural Network đầu tiên}

@@ -108,7 +108,7 @@ Vậy, có những kỹ thuật nào giúp tránh quá khớp?
  
 Trước hết, chúng ta cần một vài đại lượng để đánh giá chất lượng của mô hình
 trên tập huấn luyện và tập kiểm tra. Dưới đây là hai đại lượng đơn giản, với
-giả sử $\mathbf{y}$ là đầu ra thực sự, và $\mathbf{\hat{y}}$ là đầu ra dự đoán
+giả sử $\mathbf{y}$ là đầu ra thực sự và $\mathbf{\hat{y}}$ là đầu ra dự đoán
 của mô hình. Ở đây, đầu ra có thể là một vector.
  
 \index{sai số huấn luyện}
@@ -256,7 +256,7 @@ Thư viện scikit-learn hỗ trợ rất nhiều phương pháp phân chia dữ
 Một nhược điểm lớn của xác thực chéo là số lượng mô hình cần huấn luyện tỉ lệ
 thuận với $k$. Điều đáng nói là mô hình hồi quy đa thức như trên chỉ có một siêu
 tham số liên quan đến độ phức tạp của mô hình cần xác định là bậc của đa thức.
-Trong nhiều bài toán, lượng siêu tham số cần xác định thường lớn hơn nhiều, và
+Trong nhiều bài toán, lượng siêu tham số cần xác định thường lớn hơn nhiều và
 khoảng giá trị của mỗi tham số cũng rộng hơn nhiều, chưa kể đến việc có những
 tham số có thể là số thực. Điều này dẫn đến việc huấn luyện nhiều mô hình là khó
 khả thi. Có một kỹ thuật tránh quá khớp khác giúp giảm số mô hình cần huấn
@@ -279,7 +279,7 @@ một tập xác thực. Khi huấn luyện, ta tính toán cả sai số huấn
 xác thực, nếu sai số huấn luyện vẫn có xu hướng giảm nhưng sai số xác thực có xu
 hướng tăng lên thì ta kết thúc thuật toán.
 
-%  Sau một vòng lặp, ta tính cả \textit{sai số huấn luyện} và \textit{sai số xác thực}, đến khi \textit{sai số xác thực} có chiều hướng tăng lên thì dừng lại, và quay lại sử dụng mô hình tương ứng với điểm và \textit{sai số xác thực} đạt giá trị nhỏ. 
+%  Sau một vòng lặp, ta tính cả \textit{sai số huấn luyện} và \textit{sai số xác thực}, đến khi \textit{sai số xác thực} có chiều hướng tăng lên thì dừng lại và quay lại sử dụng mô hình tương ứng với điểm và \textit{sai số xác thực} đạt giá trị nhỏ. 
  
 % <div class="imgcap"> 
 % <img src ="\assets\15_overfitting\EarlyStopping.png" align = "center" width = "400"> 
@@ -402,7 +402,7 @@ So với kiểm soát kiểm soát $\ell_2$, kiểm soát $\ell_1$ được cho 
 % R(\mathbf{W}) = \|\mathbf{w}\|_1 = \sum_{i=0}^d \|w_i\| 
 % \end{equation*} 
  
-% Norm 1 là tổng các trị tuyệt đối của tất cả các phần tử. Người ta đã chứng minh được rằng tối thiểu norm 1 sẽ dẫn tới nghiệm có nhiều phần tử bằng 0. Ngoài ra, vì norm 1 là một \textit{norm thực sự} (proper norm) nên hàm số này là \textit{convex}, và hiển nhiên là liên tục, việc giải bài toán này dễ hơn việc giải bài toán tổi thiểu norm 0. Về $l_1$ regularization, bạn đọc có thể đọc thêm trong \href{http://machinelearningcoban.com$l_1$ regularization}{lecture note} này. Việc giải bài toán $l_1$ regularization nằm ngoài mục đích của tôi trong bài viết này. Tôi hứa sẽ quay lại phần này sau. (Vì đây là phần chính trong nghiên cứu của tôi). 
+% Norm 1 là tổng các trị tuyệt đối của tất cả các phần tử. Người ta đã chứng minh được rằng tối thiểu norm 1 sẽ dẫn tới nghiệm có nhiều phần tử bằng 0. Ngoài ra, vì norm 1 là một \textit{norm thực sự} (proper norm) nên hàm số này là \textit{convex} và hiển nhiên là liên tục, việc giải bài toán này dễ hơn việc giải bài toán tổi thiểu norm 0. Về $l_1$ regularization, bạn đọc có thể đọc thêm trong \href{http://machinelearningcoban.com$l_1$ regularization}{lecture note} này. Việc giải bài toán $l_1$ regularization nằm ngoài mục đích của tôi trong bài viết này. Tôi hứa sẽ quay lại phần này sau. (Vì đây là phần chính trong nghiên cứu của tôi). 
  
 % Trong Thống Kê, việc sử dụng $l_1$ regularization còn được gọi là \href{https://en.wikipedia.org/wiki/Lasso_(statistics}{LASSO}) (Least Absolute Shrinkage and Selection Operator)). 
  

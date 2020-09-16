@@ -187,7 +187,7 @@ hoá) trong Hình~\ref{fig:24_2}b được cho trong Hình~\ref{fig:24_2}c.
 Ma trận tương tự $\mathbf{S}$ là
 một ma trận đối xứng vì $\cos$ là một hàm chẵn\footnote{Một hàm số
 $f:\R\rightarrow \R$ được gọi là \textit{chẵn} nếu $f(x) = f(-x),~\forall x \in
-\R$.}, và nếu $A$ tương tự $B$ thì điều
+\R$.} và nếu $A$ tương tự $B$ thì điều
 ngược lại cũng đúng. Các ô trên đường chéo đều là
 $\text{cos}$ của góc giữa một vector và chính nó, tức $\text{cos}(0) = 1$. Khi
 tính toán ở các bước sau, chúng ta không cần quan tâm tới các giá trị này.
@@ -239,7 +239,7 @@ Giống với như KNN, NBCF cũng dùng thông tin của $k$ người dùng lâ
 sản phẩm, chúng ta chỉ quan tâm tới những người dùng
 đã đánh giá sản phẩm đó trong lân cận. {Giá trị cần điền} thường được xác
 định là {trung bình có trọng số} của các đánh giá đã chuẩn hoá. Có một điểm cần lưu ý, trong KNN, các trọng số được xác định dựa trên
-khoảng cách giữa hai điểm, và các khoảng cách này luôn là các số không âm.
+khoảng cách giữa hai điểm và các khoảng cách này luôn là các số không âm.
 Trong NBCF, các trọng số được xác định dựa trên độ tương tự giữa hai
 người dùng. Những trọng số này có thể là các số âm. Công thức phổ biến được sử
 dụng để dự đoán độ quan tâm của người dùng $u$ tới sảm phẩm $i$
@@ -368,7 +368,7 @@ Thuật toán lọc cộng tác tương đối đơn giản và không
 chứa bài toán tối ưu nào. Chúng ta tiếp tục sử dụng bộ cơ sở dữ liệu MovieLens
 100k như trong chương trước. \pythoninline{Class
 uuCF} trong đoạn code dưới đây thực hiện quy trình lọc cộng tác người dùng. Có hai phương thức chính của
-\pythoninline{class} này là \pythoninline{fit} -- tính ma trận tương tự, và
+\pythoninline{class} này là \pythoninline{fit} -- tính ma trận tương tự và
 \pythoninline{predict} -- dự đoán số sao mà một người dùng sẽ đánh giá một
 sản phẩm:
  \newpage 

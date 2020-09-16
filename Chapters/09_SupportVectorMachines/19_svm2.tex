@@ -2,7 +2,7 @@
 \chapter{Máy vector hỗ trợ}
 % \chapter{Support vector machine}
 \label{cha:svm}
-% Trong loạt bài tiếp theo, tôi sẽ trình bày về một trong những thuật toán classification phổ biến nhất (cùng với \href{http://machinelearningcoban.com/2017/02/17/softmax/}{softmax regression}). Có rất nhiều suy luận toán học trong phần này yêu cầu bạn cần có kiến thức về \href{http://machinelearningcoban.com/2017/04/02/duality/}{Duality} cũng như về tối ưu lồi. Bạn được khuyến khích đọc các Bài 16, 17, và 18 trước khi đọc bài này.
+% Trong loạt bài tiếp theo, tôi sẽ trình bày về một trong những thuật toán classification phổ biến nhất (cùng với \href{http://machinelearningcoban.com/2017/02/17/softmax/}{softmax regression}). Có rất nhiều suy luận toán học trong phần này yêu cầu bạn cần có kiến thức về \href{http://machinelearningcoban.com/2017/04/02/duality/}{Duality} cũng như về tối ưu lồi. Bạn được khuyến khích đọc các Bài 16, 17 và 18 trước khi đọc bài này.
 \index{máy vector hỗ trợ -- support vector machine}
 \index{support vector machine -- máy vector hỗ trợ}
 
@@ -210,7 +210,7 @@ Bằng một biến đổi đơn giản, ta có thể tiếp tục đưa bài to
 \end{aligned}
 \end{eqnarray}
 Ở đây, ta đã lấy nghịch đảo hàm mục tiêu, bình phương nó để được một hàm
-khả vi, và nhân với $\displaystyle\frac{1}{2}$ để biểu thức đạo hàm đẹp hơn.
+khả vi và nhân với $\displaystyle\frac{1}{2}$ để biểu thức đạo hàm đẹp hơn.
 
 Trong bài toán~\eqref{eqn:19_svm3}, hàm mục tiêu
 là một chuẩn -- có dạng toàn phương. Các hàm bất phương trình ràng buộc là affine. Vậy bài toán
@@ -401,7 +401,7 @@ optimization} (SMO)~\cite{platt1998sequential,zeng2008fast}. Trong phạm vi cu�
 sách, chúng ta sẽ không đi sâu tiếp vào việc giải hệ KKT như thế nào.
 
 Trong phần tiếp
-theo chúng ta sẽ giải bài toán tối ưu \eqref{eqn:19_svm9} qua một ví dụ nhỏ bằng CVXOPT, và trực tiếp sử dụng thư viện \pythoninline{sklearn} để huấn luyện mô hình SVM.
+theo chúng ta sẽ giải bài toán tối ưu \eqref{eqn:19_svm9} qua một ví dụ nhỏ bằng CVXOPT và trực tiếp sử dụng thư viện \pythoninline{sklearn} để huấn luyện mô hình SVM.
 Sau khi tìm được $\blambda$ từ bài toán \eqref{eqn:19_svm9}, ta có thể suy ra $\mathbf{w}$ dựa vào \eqref{eqn:19_svm12} và $b$ dựa vào
 \eqref{eqn:19_svm11} và \eqref{eqn:19_svm13}. Rõ ràng ta chỉ cần quan tâm tới
 $\lambda_n \neq 0$.

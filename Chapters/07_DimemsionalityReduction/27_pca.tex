@@ -298,7 +298,7 @@ nhau, ta cần bỏ đi những phần tử nào?
 Để trả lời câu hỏi thứ nhất, hãy quan sát Hình~\ref{fig:pca_2a}. Giả sử các
 điểm dữ liệu có thành phần thứ hai (phương đứng) giống hệt nhau hoặc sai khác
 nhau không đáng kể (phương sai nhỏ). Khi đó, thành phần này hoàn toàn có thể được lược
-bỏ, và ta ngầm hiểu rằng nó sẽ được xấp xỉ bằng kỳ vọng của thành phần đó
+bỏ và ta ngầm hiểu rằng nó sẽ được xấp xỉ bằng kỳ vọng của thành phần đó
 trên toàn bộ dữ liệu. Ngược lại, nếu áp dụng phương pháp này lên chiều thứ nhất (phương ngang), {lượng thông tin} bị mất đi đáng kể do sai số xấp xỉ quá lớn. Vì vậy, lượng thông tin theo mỗi thành phần có thể được đo bằng phương sai của dữ liệu trên thành phần đó. Tổng lượng
 thông tin là tổng phương sai trên toàn bộ các thành phần. Lấy
 một ví dụ về việc có hai camera được đặt dùng để chụp cùng một người, một camera
@@ -657,7 +657,7 @@ sao cho việc xấp xỉ sau đây là tốt nhất:
 \bX \approx \tilde{\bX} = \bU_K \mathbf{Z} + \what{\bU}_K \what{\bU}_K^T\bar{\mathbf{x}}\mathbf{1}^T 
 \end{equation} 
 với $\bU_K, \what{\bU}_K$ lần lượt là các ma trận được tạo bởi $K$ cột đầu tiên
-và $D-K$ cột cuối cùng của ma trận trực giao $\bU$, và $\bar{\mathbf{x}}$ là
+và $D-K$ cột cuối cùng của ma trận trực giao $\bU$ và $\bar{\mathbf{x}}$ là
 vector trung bình của dữ liệu.
  
 {Giả sử rằng vector trung bình $\bar{\mathbf{x}} = \mathbf{0}$}. Khi đó, \eqref{eqn:28_3} tương đương với
@@ -684,7 +684,7 @@ Bạn có nhận ra điểm tương đồng giữa hai bài toán tối ưu \eqr
   \eqref{eqn:28_2} \\\ 
   \mathbf{Z} \quad\text{trong}\quad~\eqref{eqn:28_5} &= \mathbf{\Sigma}_K \mathbf{V}_K^T \quad\text{trong} \quad \eqref{eqn:28_2} 
 \end{align*} 
-Như vậy, nếu các điểm dữ liệu được biểu diễn bởi các cột của một ma trận, và
+Như vậy, nếu các điểm dữ liệu được biểu diễn bởi các cột của một ma trận và
 trung bình các cột của ma trận đó là vector không thì nghiệm của bài toán PCA được rút ra trực tiếp từ SVD cắt ngọn của 
 ma trận đó. Nói cách khác, việc đi tìm nghiệm cho PCA chính là việc giải một
 bài toán phân tích ma trận thông qua SVD.
@@ -866,7 +866,7 @@ này đã được căn chỉnh cho cùng với kích thước và khuôn mặt 
 một hình chữ nhật có kích thước $116 \times  98$ điểm ảnh. Có tất cả 15 người khác
 nhau, mỗi người có 11 bức ảnh được chụp ở các điều kiện ánh sáng và cảm xúc khác
 nhau, bao gồm \pythoninline{'centerlight', 'glasses', 'happy', 'leftlight',
-'noglasses', 'normal', 'rightlight','sad', 'sleepy', 'surprised'}, và
+'noglasses', 'normal', 'rightlight','sad', 'sleepy', 'surprised'} và
 \pythoninline{'wink'}. Hình \ref{fig:28_1} minh hoạ các bức ảnh của
 người có id là 10. 
 % <hr> 
@@ -1008,7 +1008,7 @@ lớn nhất của ma trận hiệp phương sai.
 \item Với các bài toán quy mô lớn, đôi khi việc tính toán trên toàn bộ dữ liệu
 là không khả thi vì vấn đề bộ nhớ. Giải pháp là thực hiện PCA lần đầu
 trên một tập con dữ liệu vừa với bộ nhớ, sau đó lấy một tập con khác để {từ từ} (\textit{incrementally}) cập nhật nghiệm của PCA tới khi hội
-tụ. Ý tưởng này khá giống với mini-batch gradient descent, và được gọi là
+tụ. Ý tưởng này khá giống với mini-batch gradient descent và được gọi là
 incremental PCA~\cite{zhao2006novel}.
  
 \item Ngoài ra, còn rất nhiều hướng mở rộng của PCA, bạn đọc có thể tìm kiếm

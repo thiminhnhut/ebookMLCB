@@ -99,7 +99,7 @@ của $\by_i$ bằng 0 trừ phần tử ở vị trí thứ $k$ bằng 1. Cách
 được gọi là mã hoá \textit{one-hot}. Cụ thể, $y_{ij} = 0,~\forall j \neq k,
 y_{ik} = 1$. Khi {chồng} các vector $\by_i$ lên nhau, ta được một ma trận nhãn
 $\bY \in \R^{N\times K}$. Nhắc lại rằng $y_{ij}$ là phần tử hàng thứ $i$, cột
-thứ $j$ của ma trận $\bY$, và cũng là phần tử thứ $j$ của vector $\by_i$. Ví dụ,
+thứ $j$ của ma trận $\bY$ và cũng là phần tử thứ $j$ của vector $\by_i$. Ví dụ,
 nếu một điểm dữ liệu có vector nhãn là $[1,0,0,\dots,0]$ thì nó thuộc vào cụm
 thứ nhất, là $[0,1,0,\dots,0]$ thì nó thuộc vào cụm thứ hai,... Điều kiện của
 $\mathbf{y}_i $ có thể viết dưới dạng toán học:
@@ -238,10 +238,10 @@ Thuật toán này sẽ hội tụ sau một số hữu hạn vòng lặp. Thậ
 lượng không tăng và bị chặn dưới. Điều này chỉ ra rằng dãy số này phải hội tụ.
 Để ý thêm nữa, số lượng cách phân cụm cho toàn bộ dữ liệu là hữu hạn (khi số
 cụm $K$ là cố định) nên đến một lúc nào đó, hàm mất mát sẽ không thể thay
-đổi, và chúng ta có thể dừng thuật toán tại đây.
+đổi và chúng ta có thể dừng thuật toán tại đây.
 
 Nếu tồn tại một cụm không chứa điểm nào, mẫu số trong~\eqref{eqn:4_mj2} sẽ
-bằng không, và phép chia sẽ không thực hiện được. Vì vậy, $K$ điểm bất kỳ trong
+bằng không và phép chia sẽ không thực hiện được. Vì vậy, $K$ điểm bất kỳ trong
 tập huấn luyện được chọn làm các tâm cụm ban đầu ở bước 1 để đảm bảo mỗi
 cụm có ít nhất một điểm. Trong quá trình huấn luyện, nếu tồn tại một cụm
 không chứa điểm nào, có hai cách giải quyết. Cách thứ nhất là bỏ cụm đó
@@ -550,7 +550,7 @@ Vector này nhận được bằng cách chồng các cột của ma trận đi�
 % vector (hàng hoặc cột) chứ không phải ma trận như số 7 ở trên, chúng ta phải làm
 % thêm một bước đơn giản trung gian gọi là \textit{vectorization} (vector hóa).
 % Nghĩa là, để có được 1 vector, ta có thể tách các hàng của ma trận pixel ra, sau đó
-% đặt chúng cạnh nhau, và chúng ta được một vector hàng rất dài biểu diễn 1 bức
+% đặt chúng cạnh nhau và chúng ta được một vector hàng rất dài biểu diễn 1 bức
 % ảnh chữ số.
 
 % \textbf{Chú ý}: \textit{Cách làm này chỉ là cách đơn giản nhất để mô tả dữ liệu
@@ -713,13 +713,13 @@ Phân cụm $K$-means cũng được áp dụng vào bài toán \textit{tách v�
 
 % Ok, có ba màu, ba clusters!
 
-Bức ảnh có ba màu chủ đạo: hồng ở khăn và môi; đen ở mắt, tóc, và hậu cảnh; màu
+Bức ảnh có ba màu chủ đạo: hồng ở khăn và môi; đen ở mắt, tóc và hậu cảnh; màu
 da ở vùng còn lại của khuôn mặt. Ảnh này khá rõ nét và các vùng được phân biệt
 rõ ràng bởi màu sắc nên chúng ta có thể áp dụng thuật toán phân cụm $K$-means.
 Thuật toán này sẽ phân các điểm ảnh thành ba cụm, cụm chứa phần khuôn mặt có thể được chọn tự động hoặc bằng tay.
 
 Đây là một bức ảnh màu, mỗi điểm ảnh được biểu diễn bởi ba giá trị tương ứng với
-màu đỏ, lục, và lam (RGB). Nếu coi mỗi điểm ảnh là một điểm dữ liệu được mô tả
+màu đỏ, lục và lam (RGB). Nếu coi mỗi điểm ảnh là một điểm dữ liệu được mô tả
 bởi một vector ba chiều chứa các giá trị này, sau đó áp dụng phân cụm $K$-means,
 chúng ta có thể đạt được kết quả như mong muốn.
 
@@ -769,7 +769,7 @@ Có ba cụm tương ứng với ba màu đỏ, hồng, đen (xem ảnh màu tro
 
 Sau khi tìm được các cụm, giá trị của mỗi pixel được thay bằng giá trị của
 tâm tương ứng. Kết quả được minh hoạ trên Hình~\ref{fig:5_girl_seg}. Ba màu
-đỏ, đen, và màu da (xem ảnh màu trong Hình~\ref{fig:5_girl_seg_c}) đã được phân
+đỏ, đen và màu da (xem ảnh màu trong Hình~\ref{fig:5_girl_seg_c}) đã được phân
 nhóm khá thành công. Khuôn mặt có thể được tách ra từ phần có màu da và vùng
 bên trong nó. Như vậy, phân cụm $K$-means tạo ra một kết quả chấp nhận được
 cho bài toán này.

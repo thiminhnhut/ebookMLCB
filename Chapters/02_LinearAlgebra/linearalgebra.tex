@@ -112,7 +112,7 @@ nói $\bA$ là một \textit{ma trận đối xứng}.
 Trong trường hợp vector hay ma trận có các phần tử là số phức, việc lấy chuyển
 vị thường đi kèm với việc lấy liên hợp phức. Tức là ngoài việc đổi vị trí của
 các phần tử, ta còn lấy liên hợp phức của các phần tử đó. Tên gọi của phép toán
-chuyển vị và lấy liên hợp này còn được gọi là \textit{chuyển vị liên hợp} (conjugate transpose), và
+chuyển vị và lấy liên hợp này còn được gọi là \textit{chuyển vị liên hợp} (conjugate transpose) và
 thường được ký hiệu bằng chữ $H$ thay cho chữ $T$. Chuyển vị liên hợp của một ma
 trận $\bA$ được ký hiệu là $\bA^H$, được đọc là $\bA$ Hermitian.
 
@@ -253,7 +253,7 @@ Với mọi vector $\bx \in \R^n$, ta có $\bI_n \bx = \bx$.
 
 Cho một ma trận vuông $\bA \in \R^{n\times n }$, nếu tồn tại một ma trận vuông
 $\bB \in \R^{n\times n}$ sao cho $\bA\bB = \bI_n$, ta nói $\bA$ là \textit{khả
-nghịch}, và $\bB$ được gọi là \textit{ma trận nghịch đảo} của $\bA$. Nếu không
+nghịch} và $\bB$ được gọi là \textit{ma trận nghịch đảo} của $\bA$. Nếu không
 tồn tại ma trận $\bB$ thoả mãn điều kiện trên, ta nói rằng ma trận $\bA$ là
 {không khả nghịch}.
 
@@ -281,7 +281,7 @@ Nếu $\bA$ không khả nghịch, thậm chí không vuông, phương trình tu
 \eqref{eqn:lin_eqn} có thể không có nghiệm hoặc có vô số nghiệm.
 
 Giả sử các ma trận vuông $\bA, \bB$ là khả nghịch, khi đó tích của chúng cũng
-khả nghịch, và $(\bA\bB)^{-1} = \bB^{-1}\bA^{-1}$. Quy tắc này cũng giống
+khả nghịch và $(\bA\bB)^{-1} = \bB^{-1}\bA^{-1}$. Quy tắc này cũng giống
 với cách tính ma trận chuyển vị của tích các ma trận.
 % subsection inverse_matrix (end)
 % section section_name (end)
@@ -494,7 +494,7 @@ là một hệ \textit{phụ thuộc tuyến tính}.
 \begin{enumerate}
     \item \textit{Một hệ là phụ thuộc tuyến tính khi và chỉ khi tồn tại một
     vector trong hệ đó là tổ hợp tuyến tính của các vector còn lại. } Thật vậy,
-    giả sử phương trình~\eqref{eqn:lin_com0} có nghiệm khác không, và hệ số khác không là $x_i$, ta sẽ có:
+    giả sử phương trình~\eqref{eqn:lin_com0} có nghiệm khác không và hệ số khác không là $x_i$, ta sẽ có:
 
     \begin{equation}
         \ba_i = \frac{-x_1}{x_i} \ba_1 + \dots + \frac{-x_{i-1}}{x_i}\ba_{i-1} +
@@ -996,7 +996,7 @@ vuông $\bA$ ứng với các trị riêng lặp hoặc phức $\lambda_1, \dots
     \bA\bx_i = \lambda_i \bx_i, ~\forall i = 1, \dots, n
 \end{math}.
 
-Đặt $\bLambda = \diag(\lambda_1, \lambda_2, \dots, \lambda_n)$, và
+Đặt $\bLambda = \diag(\lambda_1, \lambda_2, \dots, \lambda_n)$ và
 $\bX = \bmt \bx_1, \bx_2, \dots, \bx_n \emt$, ta sẽ có $\bA\bX = \bX\bLambda$.
 Hơn nữa, nếu các trị riêng $\bx_1, \dots, \bx_n$ là độc lập tuyến tính, ma trận
 $\bX$ là một ma trận khả nghịch. Khi đó ta có thể viết $\bA$ dưới dạng tích của
@@ -1085,7 +1085,7 @@ Ma trận \textit{xác định âm} và \textit{nửa xác định âm}  cũng �
 tương tự.
 
 Ký hiệu $\bA \succ 0, \succeq 0, \prec 0, \preceq 0$ lần lượt để chỉ một ma trận
-là xác định dương, nửa xác định dương, xác định âm, và nửa xác định âm. Ký hiệu
+là xác định dương, nửa xác định dương, xác định âm và nửa xác định âm. Ký hiệu
 $\bA \succ \bB$ cũng được dùng để chỉ ra rằng $\bA - \bB
 \succ 0$.
 
@@ -1100,7 +1100,7 @@ Mở rộng, một ma trận Hermitian $\bA \in \mathbb{C}^{n\times n}$ là xác
 \begin{equation}
     \bx^H\bA\bx > 0, \forall \bx \in \mathbb{C}^{n}, \bx \neq \mathbf{0}.
 \end{equation}
-Các khái niệm nửa xác định dương, xác định âm, và nửa xác định dương cũng được
+Các khái niệm nửa xác định dương, xác định âm và nửa xác định dương cũng được
 định nghĩa tương tự cho các ma trận Hermitian.
 \subsection{Tính chất} % (fold)
 \label{sub:tinh_chat}
@@ -1291,7 +1291,7 @@ $\|\mathbf{x}\|_2^2 = \bx^T\bx$.
     \label{eqn:normp}
     \|\mathbf{x}\|_p = (|x_1|^p + |x_2|^p + \dots |x_n|^p)^{\frac{1}{p}}
 \end{equation}
-được chứng minh thỏa mãn ba điều kiện của chuẩn, và được gọi là {chuẩn $\ell_p$}.
+được chứng minh thỏa mãn ba điều kiện của chuẩn và được gọi là {chuẩn $\ell_p$}.
      
 
 % Nhận thấy rằng khi $p \rightarrow 0 $ thì biểu thức \eqref{eqn:normp} trở thành

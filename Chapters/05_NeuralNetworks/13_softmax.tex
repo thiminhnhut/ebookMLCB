@@ -90,7 +90,7 @@ ràng buộc giữa chúng, tổng các xác suất này không đảm bảo b�
 
  
 \index{ma trận trọng số -- weight matrix}
-Các mô hình hồi quy tuyến tính, PLA, và hồi quy logistic chỉ có một nút ở tầng
+Các mô hình hồi quy tuyến tính, PLA và hồi quy logistic chỉ có một nút ở tầng
 đầu ra. Trong các trường hợp đó, tham số mô hình chỉ là một vector $\bw$.
 Trong trường hợp tầng đầu ra có nhiều hơn một nút, tham số mô hình sẽ là tập hợp
 tham số $\bw_i$ ứng với từng nút. Lúc này, ta có một \textit{ma trận
@@ -283,7 +283,7 @@ $\mathbf{y}$ ở dạng one-hot. Khi cả hai là các vector thể hiện xác 
 khoảng cách giữa chúng thường được đo bằng một hàm số được gọi là
 \textit{entropy chéo} $H(\by, \ba)$. Đặc điểm nổi bật của hàm số 
 
-Một đặc điểm nổi bật là nếu cố định $\by$, hàm số sẽ đạt giá trị nhỏ nhất khi $\ba = \by$, và càng lớn nếu $\ba$ càng khác $\by$.
+Một đặc điểm nổi bật là nếu cố định $\by$, hàm số sẽ đạt giá trị nhỏ nhất khi $\ba = \by$ và càng lớn nếu $\ba$ càng khác $\by$.
 
 % % \subsection{} 
 % \begin{equation} 
@@ -480,7 +480,7 @@ def softmax_loss(X, y, W):
 
     \item $\bW \in \R^{d\times C}$, \pythoninline{W.shape == (d, C)}. 
 
-    \item $\bW^T\bX$ sẽ được biểu diễn bởi \pythoninline{X.dot(W)}, và có
+    \item $\bW^T\bX$ sẽ được biểu diễn bởi \pythoninline{X.dot(W)} và có
     \pythoninline{shape == (N, C)}. 
 
     \item Khi làm việc với phép nhân ma trận hay mảng nhiều chiều trong numpy,
@@ -709,7 +709,7 @@ phân loại nhị phân.
 % X = np.random.randn(d, N) 
 % y = np.random.randint(0, 3, (N,)) 
 % \end{lstlisting}
-% Trong ví dụ đơn giản này, số điểm dữ liệu chỉ là \pythoninline{N = 2}, số chiều dữ liệu \pythoninline{d = 2}, và số classes \pythoninline{C = 3}. Những giá trị đủ nhỏ này giúp cho việc kiểm tra có thể được thực hiện một cách tức thì. Sau khi thuật toán chạy đúng với những giá trị nhỏ này, ta có thể thay \pythoninline{N, d, C} bằng vài giá trị khác trước khi sử dụng dữ liệu thật.  
+% Trong ví dụ đơn giản này, số điểm dữ liệu chỉ là \pythoninline{N = 2}, số chiều dữ liệu \pythoninline{d = 2} và số classes \pythoninline{C = 3}. Những giá trị đủ nhỏ này giúp cho việc kiểm tra có thể được thực hiện một cách tức thì. Sau khi thuật toán chạy đúng với những giá trị nhỏ này, ta có thể thay \pythoninline{N, d, C} bằng vài giá trị khác trước khi sử dụng dữ liệu thật.  
  
  
 % \subsection{Ma trận one-hot coding }

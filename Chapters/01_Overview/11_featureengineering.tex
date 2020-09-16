@@ -4,7 +4,7 @@
  
 \section{Giới thiệu }
  
-% Cho tới lúc này, tôi đã trình bày 5 thuật toán Machine Learning cơ bản: \href{http://machinelearningcoban.com/2016/12/28/linearregression/}{Linear Regression}, \href{http://machinelearningcoban.com/2017/01/01/kmeans/}{$K$-means Clusterning}, \href{http://machinelearningcoban.com/2017/01/08/knn/}{K-nearest neighbors}, \href{http://machinelearningcoban.com/2017/01/21/perceptron/}{Perceptron Learning Algorithm} và \href{http://machinelearningcoban.com/2017/01/27/logisticregression/}{Logistic Regression}. Trong tất cả các thuật toán này, tôi đều giả sử các điểm dữ liệu được biểu diễn bằng các vector, được gọi là \textit{feature vector} hay \textit{vector đặc trưng}, có độ dài bằng nhau, và cùng là vector cột hoặc vector hàng. Tuy nhiên, trong các bài toán thực tế, mọi chuyện không được tốt đẹp như vậy! 
+% Cho tới lúc này, tôi đã trình bày 5 thuật toán Machine Learning cơ bản: \href{http://machinelearningcoban.com/2016/12/28/linearregression/}{Linear Regression}, \href{http://machinelearningcoban.com/2017/01/01/kmeans/}{$K$-means Clusterning}, \href{http://machinelearningcoban.com/2017/01/08/knn/}{K-nearest neighbors}, \href{http://machinelearningcoban.com/2017/01/21/perceptron/}{Perceptron Learning Algorithm} và \href{http://machinelearningcoban.com/2017/01/27/logisticregression/}{Logistic Regression}. Trong tất cả các thuật toán này, tôi đều giả sử các điểm dữ liệu được biểu diễn bằng các vector, được gọi là \textit{feature vector} hay \textit{vector đặc trưng}, có độ dài bằng nhau và cùng là vector cột hoặc vector hàng. Tuy nhiên, trong các bài toán thực tế, mọi chuyện không được tốt đẹp như vậy! 
 
 % \index{feature engineering}
 \index{vector đặc trưng -- feature vector}
@@ -256,7 +256,7 @@ Có một vài điều cần lưu ý trong BoW:
 \begin{itemize}
     \item Với những ứng dụng thực tế, {từ điển} có số lượng từ lớn hơn rất
     nhiều, có thể đến cả triệu, như vậy vector đặc trưng thu được sẽ rất dài.
-    Một văn bản chỉ có một câu, và một tiểu thuyết nghìn trang đều được biểu
+    Một văn bản chỉ có một câu và một tiểu thuyết nghìn trang đều được biểu
     diễn bằng các vector có kích thước như nhau.
 
     \item Có rất nhiều từ trong từ điển không xuất hiện trong một văn bản. Như
@@ -283,7 +283,7 @@ Có một vài điều cần lưu ý trong BoW:
     \item Nhược điểm lớn nhất của BoW là nó không mang thông tin về thứ tự của
     các từ, cũng như sự liên kết giữa các câu, các đoạn văn trong văn bản. Thứ
     tự của các từ trong văn bản thường mang thông tin quan trọng. Ví dụ, ba câu
-    sau đây: ``Em yêu anh không?'', ``Em không yêu anh'', và ``Không, (nhưng)
+    sau đây: ``Em yêu anh không?'', ``Em không yêu anh'' và ``Không, (nhưng)
     anh yêu em'' khi được trích chọn đặc trưng bằng BoW sẽ cho ra ba vector
     giống hệt nhau, mặc dù ý nghĩa khác hẳn nhau.
 \end{itemize}
@@ -299,12 +299,12 @@ Có một vài điều cần lưu ý trong BoW:
 BoW cũng được áp dụng cho các bức ảnh với cách định nghĩa \textit{từ} và
 \textit{từ điển} khác. Xét các ví dụ sau:
  
-\textit{Ví dụ 1}: Giả sử có một tập dữ liệu ảnh có hai nhãn là rừng và sa mạc, và một bức ảnh chỉ rơi vào một trong hai loại này. Việc phân
+\textit{Ví dụ 1}: Giả sử có một tập dữ liệu ảnh có hai nhãn là rừng và sa mạc và một bức ảnh chỉ rơi vào một trong hai loại này. Việc phân
 loại một bức ảnh là rừng hay sa mạc một cách tự nhiên nhất là dựa vào màu sắc.
 Màu xanh lục nhiều tương ứng với rừng, màu đỏ và vàng nhiều tương ứng với sa mạc. Ta có một mô hình đơn giản để trích chọn đặc trưng như sau:
 \begin{itemize}
     \item Với một bức ảnh, chuẩn bị một vector $\mathbf{x}$ có số chiều bằng 3,
-    đại diện cho ba màu xanh lục ($x_1$), đỏ ($x_2$), và vàng ($x_3$).  
+    đại diện cho ba màu xanh lục ($x_1$), đỏ ($x_2$) và vàng ($x_3$).  
 
     \item Với mỗi điểm ảnh trong bức ảnh đó, xem nó gần với màu xanh, đỏ hay
     vàng nhất dựa trên giá trị của điểm ảnh đó. Nếu nó gần điểm xanh nhất, tăng

@@ -23,7 +23,7 @@ $P$ cải thiện theo kinh nghiệm $E$.
 
 Lấy ví dụ về một chương trình máy tính có khả năng tự chơi cờ vây. Chương trình này tự học từ các ván cờ đã chơi trước đó của con người để tính toán ra các chiến thuật hợp lý nhất. Mục đích của việc học này là tạo ra một chương trình có khả năng giành phần thắng cao. Chương trình này cũng có thể tự cải thiện khả năng của mình bằng cách chơi hàng triệu ván cờ với chính nó. Trong ví dụ này, chương trình máy tính có nhiệm vụ chơi cờ vây thông qua kinh nghiệm là {các ván cờ đã chơi} với chính nó và của con người. Phép đánh giá ở đây chính là khả năng giành chiến thắng của chương trình.
 
-Để xây dựng một chương trình máy tính có khả năng học, ta cần xác định rõ ba yếu tố: nhiệm vụ, phép đánh giá, và nguồn dữ liệu huấn luyện. 
+Để xây dựng một chương trình máy tính có khả năng học, ta cần xác định rõ ba yếu tố: nhiệm vụ, phép đánh giá và nguồn dữ liệu huấn luyện. 
 
 Trong chương này, chúng ta sẽ tìm hiểu các yếu tố này thông qua các ví dụ.
 
@@ -50,7 +50,7 @@ học được, các điểm dữ liệu thường được đưa về dạng t�
 
 Có những loại dữ liệu được biểu diễn dưới dạng ma trận hoặc mảng nhiều chiều.
 Một bức ảnh xám có thể được coi là một ma trận mà mỗi phần tử là giá trị độ sáng
-của điểm ảnh tương ứng. Một bức ảnh màu ba kênh đỏ, lục, và lam có thể được biểu
+của điểm ảnh tương ứng. Một bức ảnh màu ba kênh đỏ, lục và lam có thể được biểu
 diễn bởi một mảng ba chiều. Trong cuốn sách này, các điểm dữ liệu đều được biểu
 diễn dưới dạng mảng một chiều, còn được gọi là \textit{vector đặc trưng}. Vector đặc trưng của một điểm dữ liệu thường được ký hiệu là $\bx \in \R^d$ trong đó $d$ là số lượng đặc trưng. Các mảng nhiều chiều được hiểu là đã bị \textit{vector hoá} thành mảng một chiều. Kỹ thuật xây dựng vector đặc trưng cho dữ liệu được trình bày cụ thể hơn trong Chương~\ref{cha:feature}.
 
@@ -58,7 +58,7 @@ diễn dưới dạng mảng một chiều, còn được gọi là \textit{vect
 % một \textit{vetor đặc trưng} \footnote{Có những loại dữ liệu được biểu diễn dưới
 % dạng ma trận hoặc mảng nhiều chiều. Một bức ảnh xám có thể được coi là một ma
 % trận mà mỗi phần tử là giá trị độ sáng của điểm ảnh tương ứng. Một bức ảnh màu
-% ba kênh đỏ, lục, và lam có thể được biểu diễn bởi một mảng ba chiều. Trong cuốn
+% ba kênh đỏ, lục và lam có thể được biểu diễn bởi một mảng ba chiều. Trong cuốn
 % sách này, các điểm dữ liệu đều được biểu diễn dưới dạng vector, các mảng nhiều
 % chiều }
 
@@ -92,7 +92,7 @@ bài toán này, chương trình được yêu cầu xác định loại/nhãn\f
 
 % Nhãn này thường là một phần
 % tử trong một tập hợp có $C$ phần tử khác nhau. Mỗi phần tử trong tập hợp này
-% được gọi là một \textit{lớp} (\textit{class}), và thường được đánh số từ $1$ đến
+% được gọi là một \textit{lớp} (\textit{class}) và thường được đánh số từ $1$ đến
 % $C$. Để giải bài toán này, ta thường phải xây dựng một hàm số $f: \R^d
 % \rightarrow \{1, 2, \dots, C\}$. Khi $y = f(\bx)$, mô hình gán cho một điểm dữ
 % liệu được mô tả bởi vector đặc trưng $\bx$ một nhãn được xác định bởi số $y$.
@@ -332,7 +332,7 @@ works} (\url{https://goo.gl/nDNcCy}).} với tổng số nước đi là xấp x
 $,
 so với cờ vua là $10^{120} $ và tổng số nguyên tử trong toàn vũ trụ là khoảng
 $10^{80}$!! Hệ thống phải chọn ra một \textit{đường đi nước bước} tối ưu trong
-số hàng nhiều tỉ tỉ lựa chọn, và tất nhiên, việc thử tất cả các lựa chọn là
+số hàng nhiều tỉ tỉ lựa chọn và tất nhiên, việc thử tất cả các lựa chọn là
 không khả thi. Về cơ bản, AlphaGo bao gồm các thuật toán thuộc cả supervised
 learning và reinforcement learning. Trong phần supervised learning, dữ liệu từ
 các ván cờ do con người chơi với nhau được đưa vào để huấn luyện. Tuy nhiên, mục
@@ -597,7 +597,7 @@ thành phần cơ bản của một hệ thống machine learning.
 % vây được xem là có độ phức tạp cực kỳ cao} với tổng số nước đi là xấp xỉ
 % $10^{761} $, so với cờ vua là $10^{120} $ và tổng số nguyên tử trong toàn vũ trụ
 % là khoảng $10^{80}$!! Vì vậy, thuật toán phải chọn ra 1 nước đi tối ưu trong số
-% hàng nhiều tỉ tỉ lựa chọn, và tất nhiên, không thể áp dụng thuật toán tương tự
+% hàng nhiều tỉ tỉ lựa chọn và tất nhiên, không thể áp dụng thuật toán tương tự
 % như \href{https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer}{IBM Deep
 % Blue}) (IBM Deep Blue đã thắng con người trong môn cờ vua 20 năm trước). Về cơ
 % bản, AlphaGo bao gồm các thuật toán thuộc cả Supervised learning và

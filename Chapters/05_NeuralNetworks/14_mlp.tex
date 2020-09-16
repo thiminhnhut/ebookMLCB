@@ -13,7 +13,7 @@
 \subsection{Perceptron cho các hàm logic cơ bản}
  
 Chúng ta cùng xét khả năng của perceptron (PLA) trong bài toán biểu
-diễn các hàm logic nhị phân: NOT, AND, OR, và XOR\footnote{đầu ra bằng \pythoninline{True}
+diễn các hàm logic nhị phân: NOT, AND, OR và XOR\footnote{đầu ra bằng \pythoninline{True}
 nếu và chỉ nếu hai đầu vào logic khác nhau.}. Để có thể sử dụng PLA với
 đầu ra là 1 hoặc -1, ta quy ước \pythoninline{True = 1} và \pythoninline{False = -1} ở đầu ra. Quan sát hàng trên của Hình~\ref{fig:14_1}, các điểm
 hình vuông là các điểm có nhãn bằng 1, các điểm hình tròn là các
@@ -26,7 +26,7 @@ perceptron với những hệ số tương ứng.
     \caption[]{Biểu diễn các hàm logic cơ bản sử dụng perceptron.}
     \label{fig:14_1}
 \end{figure}
-Nhận thấy rằng với bài toán NOT, AND, và OR, dữ liệu hai lớp là tách biệt tuyến, vì vậy ta có thể tìm được các hệ số cho mạng perceptron giúp biểu diễn
+Nhận thấy rằng với bài toán NOT, AND và OR, dữ liệu hai lớp là tách biệt tuyến, vì vậy ta có thể tìm được các hệ số cho mạng perceptron giúp biểu diễn
 chính xác mỗi hàm số. Chẳng hạn với hàm NOT, khi $x_1 = 0$ (False), ta có $a =
 \text{sgn}(-2 \times 0+1) = 1$ (True); khi $x_1 = 1$, $a = \text{sgn}(-2\times 1 + 1) =
 -1$. Trong cả hai trường hợp, đầu ra dự đoán đều giống đầu ra thực sự. Bạn
@@ -713,7 +713,7 @@ Chúng ta cùng đi sâu vào xây dựng bộ phân loại dựa trên dữ li�
     {\caption{ 
     Mạng neuron đa tầng với tầng đầu vào có hai nút (nút điều chỉnh đã được ẩn),
     một tầng ẩn với hàm kích hoạt ReLU (có thể có số lượng nút ẩn
-    tuỳ ý), và tầng đầu ra là một hồi quy softmax với ba phần tử đại diện
+    tuỳ ý) và tầng đầu ra là một hồi quy softmax với ba phần tử đại diện
     cho ba lớp dữ liệu. 
     }
     \label{fig:14_8}}
@@ -1084,7 +1084,7 @@ lại như vậy? Hy vọng bạn đọc có thể tự trả lời được.
  
 % \item Với \pythoninline{d1 = 5}, đường phân định giữa ba classes gần như là đường thẳng. 
  
-% \item Với \pythoninline{d1 = 15}, mặc dù kết quả đã đạt 99.33\%, vẫn có một vùng đỏ nhỏ nằm giữa nhánh màu lục và màu lam, và một vùng màu lam khá lớn giữa màu đỏ và lục. Khi một điểm dữ liệu test rơi vào những vùng này, nó sẽ bị phân loại sai. 
+% \item Với \pythoninline{d1 = 15}, mặc dù kết quả đã đạt 99.33\%, vẫn có một vùng đỏ nhỏ nằm giữa nhánh màu lục và màu lam và một vùng màu lam khá lớn giữa màu đỏ và lục. Khi một điểm dữ liệu test rơi vào những vùng này, nó sẽ bị phân loại sai. 
  
 % \item Với \pythoninline{d1 = 20}, kết quả nhận được đã tương đối giống với \pythoninline{d1 = 100}. Mặc dù các đường boundary không được trơn tru cho lắm. 
  
