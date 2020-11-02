@@ -617,7 +617,7 @@ def softmax_fit(X, y, W, lr = 0.01, nepochs = 100, tol = 1e-5, batch_size = 10):
     return W, loss_hist 
 \end{lstlisting}
 Cuối cùng là hàm dự đoán nhãn của các điểm dữ liệu mới. Nhãn của một điểm dữ
-liệu mới được xác định bằng chỉ số của lớp dữ liệu có xác suất rơi vào cao nhất,
+liệu mới được xác định bằng chỉ số của lớp dữ liệu có xác suất rơi vào cao nhất 
 và cũng chính là chỉ số của score cao nhất. 
 \begin{lstlisting}[language=Python]
 def pred(W, X):
